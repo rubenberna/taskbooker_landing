@@ -1,28 +1,7 @@
 extends ../components/layout/head.pug
 block content
     include ../components/layout/nav
-    div#headlinecontainer
-      div#headline= Headline
-      div#HeadlineDynamicContent= HeadlineDynamicContent
-      div#bullets
-        ul
-          li#bullet1
-            i(class="fas fa-check-circle") 
-            | 
-            = Bullet1
-          li#bullet2
-            i(class="fas fa-check-circle") 
-            | 
-            = Bullet2
-          li#bullet3
-            i(class="fas fa-check-circle") 
-            | 
-            = Bullet3
-          li#bullet4
-            i(class="fas fa-check-circle") 
-            | 
-            = Bullet4
-      button(class="btn btn-primary")= CTAtext
+    include ../components/banners/bannerOne/bannerOne
     div.container
       div.title How it works
       img(src="http://img.jpg")
@@ -64,7 +43,6 @@ block content
         span Or do you want to earn extra money. Click here
       div.spacer
       button(class="btn btn-primary large")= CTAtext
-    include ../components/banners/bannerOne/bannerOne
     include ../components/layout/footer
       
 

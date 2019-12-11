@@ -1,17 +1,16 @@
 #banner-one {
   background: var(--bannerOne);
-  height: 80vh;
+  height: 800px;
   padding: 90px 150px;
+  position: relative;
 }
 
 .banner-one-container {
   display: flex;
-  /* background: purple; */
   justify-content: space-evenly;
 }
 
 .banner-one-container-text {
-  /* background: yellow; */
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -26,10 +25,6 @@ h1.banner-one-container-text-header {
   font-weight: 600;
 }
 
-.banner-one-container-text-bullets {
-
-}
-
 li.bullet {
   font-size: 26px;
   margin-bottom: 32px;
@@ -42,7 +37,6 @@ i.fa-check-circle {
 
 .banner-one-container-img {
   display: flex;
-  /* background: aliceblue; */
   height: 500px;
 }
 
@@ -73,8 +67,7 @@ button.large-btn {
   font-weight: 400;
   font-size: 39px;
   line-height: 47px;
-  max-width: 490px;
-  width: 100%;
+  max-width: 570px;
   align-self: center;
 }
 
@@ -82,4 +75,26 @@ button.large-btn:hover {
   background-color: #fff;
   border-color: #0a67b3;
   color: #0a67b3;
+}
+
+.banner-one-breadcrumbs {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+}
+
+.banner-one-breadcrumb {
+  margin-right: 15px;
+  font-size: 18px;
+  color: var(--accent-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.inner-breadcrumb {
+  display: flex;
+}
+
+i.bc {
+  margin-right: 15px;
 }

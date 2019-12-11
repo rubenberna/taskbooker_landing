@@ -25,4 +25,15 @@ div#banner-one
     div.banner-one-container-img
       img(src='../../../assets/images/vrow_phone.svg' class='banner-one-img down')
       img(src='../../../assets/images/man_tablet.svg' class='banner-one-img up')
+  div.banner-one-breadcrumbs
+    if Breadcrumb1
+      span.banner-one-breadcrumb #{Breadcrumb1category} 
+    if Breadcrumb2
+      div.inner-breadcrumb
+        <i class="material-icons bc">chevron_right</i>
+        span.banner-one-breadcrumb #{Breadcrumb2category}
+    if Breadcrumb3
+      div.inner-breadcrumb
+        <i class="material-icons bc">chevron_right</i>
+        span.banner-one-breadcrumb #{Breadcrumb3category}
       

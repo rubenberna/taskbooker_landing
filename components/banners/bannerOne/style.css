@@ -1,0 +1,38 @@
+#banner-one {
+  background: green;
+  height: 80vh;
+  padding: 90px;
+}
+
+.banner-one-container {
+  display: flex;
+  background: purple;
+  justify-content: space-between;
+}
+
+.banner-one-container-text {
+  background: yellow;
+  width: 60%;
+}
+
+h1.banner-one-container-text-header {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.banner-one-container-text-bullets {
+
+}
+
+i.fa-check-circle {
+  color: var(--downy)
+}
+
+.banner-one-container-img {
+  display: flex;
+  background: aliceblue;
+}
+
+img.banner-one-img {
+  width: 300px;
+}

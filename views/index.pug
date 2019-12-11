@@ -1,10 +1,6 @@
-html
-  head
-    title= title
-    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', type='text/css')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css', type='text/css')
-    link(rel='stylesheet', href='/css/main.css', type='text/css')
-  body
+extends ../components/layout/head.pug
+block content
+    include ../components/layout/nav
     div#headlinecontainer
       div#headline= Headline
       div#HeadlineDynamicContent= HeadlineDynamicContent

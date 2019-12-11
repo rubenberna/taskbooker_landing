@@ -1,8 +1,10 @@
 let express = require('express');
-let app = express(); 
+let app = express();
 let data = require('./data.js');
 
 app.use(express.static('.'));
+
+// Load view engine
 app.set('view engine', 'pug');
 
 app.get('*', function (req, res) {
@@ -15,11 +17,11 @@ app.get('*', function (req, res) {
       let key = "www_taskbooker_be" + req.params[0].replace(/\//g, "_");
       if (data.content[key])
         res.render('index', { ...data.content[key]});
-      else 
+      else
         res.end('invalid params');
     }
   })
 
 app.listen(3131, () => {
     console.log("listening to port 3131");
-}); 
+});

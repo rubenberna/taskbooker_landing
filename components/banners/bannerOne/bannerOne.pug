@@ -1,27 +1,28 @@
 div#banner-one
   div.banner-one-container
     div.banner-one-container-text
-      h1.banner-one-container-text-header #{HeadlineDynamicContent}
-      div.banner-one-container-text-bullets
-        ul
-          li#bullet1
-            i(class="fas fa-check-circle") 
-            | 
-            = Bullet1
-          li#bullet2
-            i(class="fas fa-check-circle") 
-            | 
-            = Bullet2
-          li#bullet3
-            i(class="fas fa-check-circle") 
-            | 
-            = Bullet3
-          li#bullet4
-            i(class="fas fa-check-circle") 
-            | 
-            = Bullet4
-        button(class='large-btn')= CTAtext
+      div.banner-one-container-text-info
+        h1.banner-one-container-text-header #{HeadlineDynamicContent}
+        div.banner-one-container-text-bullets
+          ul
+            li.bullet
+              i(class="fas fa-check-circle") 
+              | 
+              = Bullet1
+            li.bullet
+              i(class="fas fa-check-circle") 
+              | 
+              = Bullet2
+            li.bullet
+              i(class="fas fa-check-circle") 
+              | 
+              = Bullet3
+            li.bullet
+              i(class="fas fa-check-circle") 
+              | 
+              = Bullet4
+      button(class='large-btn')= CTAtext
     div.banner-one-container-img
-      img(src='../../../assets/images/vrow_phone.svg' class='banner-one-img')
-      img(src='../../../assets/images/man_tablet.svg' class='banner-one-img')
+      img(src='../../../assets/images/vrow_phone.svg' class='banner-one-img down')
+      img(src='../../../assets/images/man_tablet.svg' class='banner-one-img up')
       

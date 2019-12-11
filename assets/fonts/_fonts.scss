@@ -1,0 +1,23 @@
+@font-face {
+  font-display: block;
+  font-family: "Gilroy";
+  font-weight: 400;
+  src: local("Gilroy-Regular"), url("./Gilroy-Regular.otf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Gilroy";
+  font-weight: 300;
+  src: local("Gilroy-UltraLight"), url("./Gilroy-UltraLight.otf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Gilroy";
+  font-weight: bold;
+  src: local("Gilroy-Extrabold"), url("./Gilroy-Extrabold.otf") format("truetype");
+  font-style: normal;
+}

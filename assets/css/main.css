@@ -1,4 +1,10 @@
-@import "../components/banners/bannerOne/style.scss";
+@import "../fonts/_fonts.scss";
+@import "../../components/banners/bannerOne/style.scss";
+
+body {
+  font-family: 'Gilroy', sans-serif;
+}
+
 
 :root {
     --dark-primary-color:       #303F9F;
@@ -41,7 +47,6 @@ blockquote{
   font-size: 1.4em;
   width:30%;
   margin:50px auto;
-  font-family:Open Sans;
   font-style:italic;
   color: #555555;
   padding:1.2em 30px 1.2em 75px;

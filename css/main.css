@@ -1,4 +1,5 @@
 @import "../components/banners/bannerOne/style.scss";
+@import "../components/banners/bannerTwo/style.scss";
 
 :root {
     --dark-primary-color:       #303F9F;

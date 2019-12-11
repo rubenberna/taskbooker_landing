@@ -1,0 +1,50 @@
+.banner-two-wrapper-container-title{
+  margin-bottom: 92px;
+  font-size: 52px;
+  line-height: 65px;
+  text-align: center;
+  font-weight: 700;
+  color: #3d2c3a;
+}
+.banner-two-wrapper-container-row{
+  margin-right: -15px;
+    margin-left: -15px;
+}
+.banner-two-wrapper {
+  padding-top: 50px;
+  position: relative;
+  height: 812px;
+}
+
+.banner-two-wrapper:before {
+  position: absolute;
+  left: 0;
+  bottom: 103px;
+  background-image: url(/images/vrouwmetklok.png);
+  background-size: contain;
+  content: "";
+  height: 451px;
+  width: 393px;
+  z-index: 2;
+}
+.banner-two-wrapper:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fcf8f7;
+  content: "";
+  height: 311px;
+  width: 100%;
+}
+
+.banner-two-wrapper-container-tasks {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 500px;
+  position: relative;
+  z-index: 9;
+
+}
+.banner-two-wrapper-container-tasks img{
+  width: 60vw;
+}

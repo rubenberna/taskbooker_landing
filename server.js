@@ -21,7 +21,9 @@ app.get('*', function (req, res) {
         res.end('invalid params');
     }
   })
-
+  app.get('/sitemap.xml', (req, res) => (
+    res.status(200).sendFile('sitemap.xml')
+  ));
 app.listen(3131, () => {
     console.log("listening to port 3131");
 });

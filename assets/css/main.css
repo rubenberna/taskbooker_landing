@@ -1,5 +1,6 @@
 @import "../fonts/_fonts.scss";
 @import "../../components/banners/bannerOne/style.scss";
+@import "../../components/layout/layout.css";
 
 body {
   font-family: 'Gilroy', sans-serif;

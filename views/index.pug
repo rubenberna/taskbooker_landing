@@ -1,0 +1,73 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', type='text/css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css', type='text/css')
+    link(rel='stylesheet', href='/css/main.css', type='text/css')
+  body
+    div#headlinecontainer
+      div#headline= Headline
+      div#HeadlineDynamicContent= HeadlineDynamicContent
+      div#bullets
+        ul
+          li#bullet1
+            i(class="fas fa-check-circle") 
+            | 
+            = Bullet1
+          li#bullet2
+            i(class="fas fa-check-circle") 
+            | 
+            = Bullet2
+          li#bullet3
+            i(class="fas fa-check-circle") 
+            | 
+            = Bullet3
+          li#bullet4
+            i(class="fas fa-check-circle") 
+            | 
+            = Bullet4
+      button(class="btn btn-primary")= CTAtext
+    div.container
+      div.title How it works
+      img(src="http://img.jpg")
+    div.spacer
+    div.container
+      div.title The Advantages
+      div.subtitle Of working with taskbooker
+      img(src="http://img.jpg")
+    div.spacer
+    div.container
+      div.title Want to know more
+      div.paragraph= Paragraph1
+      div.paragraph= Paragraph2
+      div.paragraph= Paragraph3
+    div.spacer
+    div.container 
+      div.title What our users say...
+      div.reviews
+        blockquote
+          = Review1
+          span= NameReview1
+        blockquote
+          = Review2
+          span= NameReview2
+        blockquote
+          = Review3
+          span= NameReview3
+    div.spacer
+    div.container 
+      div.title Download the app
+      div.subtitle Take Taskbooker with you everywhere
+      div.logos
+        img.logo(src="/images/googleplay.png")
+        img.logo(src="/images/appstore.svg")
+    div.spacer
+    div.containerrow
+      div.taskaction
+        | Get your tasks done now
+        span Or do you want to earn extra money. Click here
+      div.spacer
+      button(class="btn btn-primary large")= CTAtext
+
+
+    

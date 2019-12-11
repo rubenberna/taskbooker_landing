@@ -1,3 +1,4 @@
+@import "../components/banners/bannerOne/style.scss";
 
 :root {
     --dark-primary-color:       #303F9F;
@@ -11,13 +12,13 @@
     --disabled-text-color:      #BDBDBD;
     --divider-color:            #BDBDBD;
 }
-    
+
 
 ul { list-style-type: none;}
 
 .paragraph { margin:6px 20px; }
 .title {font-size:20px; font-weight: bold;}
-.subtitle {font-size:16px;} 
+.subtitle {font-size:16px;}
 
 img { padding-top:20px;}
 

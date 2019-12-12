@@ -44,7 +44,59 @@
 .nav-mobile-containerWrapper-rowNav-menuListItem {
     font-size: 16px;
     line-height: 19px;
-    color: #3d2c3a !important;
+    color: var(--thunder);
     text-decoration: none !important;
     padding: 10px 20px;
+}
+footer{
+    display: block;
+}
+.footer-container-wrappercontainer{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.footer-container-wrappercontainer-wrapperFooter{
+    padding: 90px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+a {
+    text-decoration: underline;
+}
+.footer-container-wrappercontainer-navigationWrapper{
+    display: flex;
+    justify-content: space-around;
+    width: calc(100% - 300px);
+}
+.footer-container-wrappercontainer-navigationWrapper-wrapperAbout{
+display: flex;
+    flex-direction: column;
+}
+.footer-container-wrappercontainer-nameofcategory{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.footer-container-wrappercontainer-item{
+    font-size: 20px;
+    line-height: 25px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    color: #3d2c3a;
+}
+.footer-container-wrappercontainer-wrapperservice {
+    display: flex;
+    flex-direction: column;
+}
+.footer-container-wrappercontainer-wrapperFooter .footer-container-wrappercontainer-rights{
+    margin-top: -25px;
+    font-size: 20px;
+    line-height: 25px;
 }

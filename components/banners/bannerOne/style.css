@@ -21,7 +21,7 @@ h1.banner-one-container-text-header {
   margin-bottom: 40px;
   font-size: 50px;
   line-height: 72px;
-  color: #3d2c3a;
+  color: var(--thunder);
   font-weight: 600;
 }
 
@@ -72,7 +72,7 @@ button.large-btn {
 }
 
 button.large-btn:hover {
-  background-color: #fff;
+  background-color: var(--white);
   border-color: var(--denim);
   color: var(--denim);
 }
@@ -119,7 +119,7 @@ button.sticky-btn {
 }
 
 button.sticky-btn:hover {
-  background-color: #fff;
+  background-color: var(--white);
   border-color: var(--denim);
   color: var(--denim);
 }

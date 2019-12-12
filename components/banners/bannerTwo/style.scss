@@ -4,13 +4,13 @@
   line-height: 65px;
   text-align: center;
   font-weight: 700;
-  color:--thunder;
+  color:var(--thunder);
 }
 
 .banner-two-wrapper {
   padding-top: 50px;
   position: relative;
-  height: 81vh;
+  height: 100vh;
 }
 
 .banner-two-wrapper:before {
@@ -28,11 +28,12 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color:--vista-white;
+  background-color:var(--vista-white);
   content: "";
   height: 311px;
   width: 100%;
 }
+
 
 .banner-two-wrapper-container-tasks {
   display: flex;

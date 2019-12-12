@@ -68,13 +68,13 @@ button.large-btn {
   font-size: 39px;
   line-height: 47px;
   max-width: 570px;
-  align-self: center;
+  align-self: baseline;
 }
 
 button.large-btn:hover {
   background-color: #fff;
-  border-color: #0a67b3;
-  color: #0a67b3;
+  border-color: var(--denim);
+  color: var(--denim);
 }
 
 .banner-one-breadcrumbs {
@@ -83,7 +83,7 @@ button.large-btn:hover {
   bottom: 10px;
 }
 
-.banner-one-breadcrumb {
+a.banner-one-breadcrumb {
   margin-right: 15px;
   font-size: 18px;
   color: var(--accent-color);
@@ -97,4 +97,29 @@ button.large-btn:hover {
 
 i.bc {
   margin-right: 15px;
+}
+
+button.sticky-btn {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  float: right;
+  height: 64px;
+  z-index: 9999;
+  border-radius: 6px;
+  padding: 13px 20px 8px;
+  background: var(--denim);
+  color: var(--white);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  min-width: 205px;
+  margin: -100px 90px 0 0;
+  font-size: 19px;
+}
+
+button.sticky-btn:hover {
+  background-color: #fff;
+  border-color: var(--denim);
+  color: var(--denim);
 }

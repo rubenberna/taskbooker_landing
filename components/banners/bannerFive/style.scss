@@ -4,21 +4,18 @@
   line-height: 65px;
   text-align: center;
   font-weight: 700;
-  color: #3d2c3a;
+  color: --thunder;
 }
 
 .banner-five-wrapper-container-row {
-
   padding: 0px 150px;
 }
 
 .banner-five-wrapper {
   padding-top: 50px;
   position: relative;
-  height: 812px;
+  height: 72vh;
 }
-
-
 
 .banner-five-wrapper-container-tasks {
   display: block;
@@ -26,5 +23,8 @@
 
   position: relative;
   z-index: 9;
+}
 
+.paragraph {
+  margin: 28px 20px;
 }

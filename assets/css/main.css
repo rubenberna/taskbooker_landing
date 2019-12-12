@@ -1,7 +1,7 @@
 @import "../fonts/_fonts.css";
 @import "./_variables.css";
 @import "../../components/banners/bannerOne/style.css";
-
+@import "../../components/banners/bannerTwo/style.scss";
 body {
   font-family: 'Gilroy', sans-serif;
 }

@@ -17,7 +17,7 @@
     max-width: 170px;
 }
 
-img {
+img .nav-mobile-containerWrapper-rowHeader-logoImg{
     vertical-align: middle;
     border: 0;
 }

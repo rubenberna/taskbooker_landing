@@ -14,12 +14,13 @@
 }
 
 .nav-mobile-containerWrapper-rowHeader-logo {
-    max-width: 170px;
+    max-width: 129px;
 }
 
-img .nav-mobile-containerWrapper-rowHeader-logoImg{
+.nav-mobile-containerWrapper-rowHeader-logoImg{
     vertical-align: middle;
     border: 0;
+    max-width: 129px;
 }
 
 .nav-mobile-containerWrapper-rowNav-logo-burgerIcon {
@@ -44,6 +45,6 @@ img .nav-mobile-containerWrapper-rowHeader-logoImg{
     font-size: 16px;
     line-height: 19px;
     color: #3d2c3a !important;
-    text-decoration: none;
+    text-decoration: none !important;
     padding: 10px 20px;
 }

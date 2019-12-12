@@ -7,6 +7,11 @@ app.use(express.static('.'));
 // Load view engine
 app.set('view engine', 'pug');
 
+// Load routes
+const content = require('./routes/api/content');
+
+app.use('/api/content', content)
+
 app.get('*', function (req, res) {
   console.log(req.params[0]);
     if (req.params[0].indexOf('.') > 0) {

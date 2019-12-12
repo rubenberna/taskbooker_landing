@@ -1,2 +1,14 @@
-nav(class="navbar navbar-light bg-light")
-  a(class="navbar-brand" href="/") Home
+div.nav-mobile
+    div.nav-mobile-containerWrapper
+        div.nav-mobile-containerWrapper-row
+            div.nav-mobile-containerWrapper-rowHeader
+                div.nav-mobile-containerWrapper-rowHeader-logo
+                    a(href='https://taskbooker.be/')
+                        img.nav-mobile-containerWrapper-rowHeader-logoImg(src="/images/logo.png")
+                div.nav-mobile-containerWrapper-rowNav-logo-burgerIcon
+                    img(src="/images/burger.svg" alt="icon" tabindex="0" role="button")
+                div.nav-mobile-containerWrapper-rowNav-menu
+                    div.nav-mobile-containerWrapper-rowNav-menuList
+                        a.nav-mobile-containerWrapper-rowNav-menuListItem(href='https://taskbooker.be/create-task') Plaats taak
+                        a.nav-mobile-containerWrapper-rowNav-menuListItem(href='https://taskbooker.be/open-task') Openstaande taken
+                        a.nav-mobile-containerWrapper-rowNav-menuListItem(href='https://taskbooker.be/how-taskbooker-works') Help

@@ -1,0 +1,49 @@
+.nav-mobile-containerWrapper {
+    max-width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav-mobile-containerWrapper-rowHeader {
+    padding: 23px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-mobile-containerWrapper-rowHeader-logo {
+    max-width: 170px;
+}
+
+img .nav-mobile-containerWrapper-rowHeader-logoImg{
+    vertical-align: middle;
+    border: 0;
+}
+
+.nav-mobile-containerWrapper-rowNav-logo-burgerIcon {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+.nav-mobile-containerWrapper-rowNav-menu{
+    display: flex;
+    height: 36px;
+}
+
+.nav-mobile-containerWrapper-rowNav-menuList {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.nav-mobile-containerWrapper-rowNav-menuListItem {
+    font-size: 16px;
+    line-height: 19px;
+    color: #3d2c3a !important;
+    text-decoration: none;
+    padding: 10px 20px;
+}

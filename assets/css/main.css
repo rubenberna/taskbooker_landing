@@ -1,5 +1,6 @@
 @import "../fonts/_fonts.css";
 @import "./_variables.css";
+@import "../../components/layout/layout.css";
 @import "../../components/banners/bannerOne/style.css";
 @import "../../components/banners/bannerTwo/style.scss";
 body {

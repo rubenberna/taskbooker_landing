@@ -1,5 +1,5 @@
 .bannerThree-container {
-    background-color:rgb(250, 246, 245);
+    background-color: var(--bannerThree);
     padding: 66px 0 110px;
 }
 

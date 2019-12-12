@@ -3,6 +3,7 @@
 @import "../../components/banners/bannerOne/style.css";
 @import "../../components/banners/bannerTwo/style.scss";
 @import "../../components/banners/bannerFive/style.scss";
+@import "../../components/banners/bannerSix/style.scss";
 
 body {
   font-family: 'Gilroy', sans-serif;

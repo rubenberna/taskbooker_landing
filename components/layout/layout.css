@@ -1,23 +1,4 @@
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-@media (min-width: 1200px)
-.Container_wrapperContainer__2Fari {
-    max-width: 1170px;
-}
-@media (min-width: 992px)
-.Container_wrapperContainer__2Fari {
-    max-width: 970px;
-}
-
-@media (min-width: 768px)
-.Container_wrapperContainer__2Fari {
-    max-width: 750px;
-    width: 100%;
-}
-
-.Container_wrapperContainer__2Fari {
+.nav-mobile-containerWrapper {
     max-width: 1170px;
     padding-right: 15px;
     padding-left: 15px;
@@ -25,23 +6,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     margin-left: auto;
 }
 
-.Header_wrapperHeader__19DIh {
+.nav-mobile-containerWrapper-rowHeader {
     padding: 23px 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: initial;
-}
-
-.Header_wrapperHeader__19DIh .Header_logo___kAfG {
+.nav-mobile-containerWrapper-rowHeader-logo {
     max-width: 170px;
 }
 
@@ -50,56 +22,28 @@ img {
     border: 0;
 }
 
-.Header_wrapperHeader__19DIh .Header_burgerIcon__1cuRA {
+.nav-mobile-containerWrapper-rowNav-logo-burgerIcon {
     width: 40px;
     height: 40px;
     display: none;
 }
 
-.Header_wrapperHeader__19DIh .Header_burgerIcon__1cuRA {
-    width: 40px;
-    height: 40px;
-    display: none;
-}
-
-.Header_wrapperHeader__19DIh .Header_wrapperMenu__3q_0J {
+.nav-mobile-containerWrapper-rowNav-menu{
     display: flex;
     height: 36px;
 }
 
-.Header_wrapperHeader__19DIh .Header_wrapperMenuList__1i02T {
+.nav-mobile-containerWrapper-rowNav-menuList {
     display: flex;
     justify-content: space-between;
     margin-right: 20px;
     align-items: center;
 }
 
-.Header_wrapperHeader__19DIh .Header_menuListItem__i_txw {
+.nav-mobile-containerWrapper-rowNav-menuListItem {
     font-size: 16px;
     line-height: 19px;
-    color: #3d2c3a;
+    color: #3d2c3a !important;
     text-decoration: none;
     padding: 10px 20px;
-}
-
-.Header_wrapperHeader__19DIh .Header_menuListItemExpandable__xu2VA {
-    cursor: pointer;
-    height: auto;
-    position: relative;
-    padding: 10px 20px;
-}
-
-.Header_wrapperHeader__19DIh .Header_submenu__2R8dw {
-    position: absolute;
-    display: none;
-    width: 140px;
-    background-color: #fff;
-    margin-left: -10px;
-    justify-content: space-between;
-    z-index: 2;
-    top: 100%;
-}
-
-.Header_wrapperHeader__19DIh .Header_submenu__2R8dw .Header_menuListItem__i_txw {
-    padding: 10px;
 }

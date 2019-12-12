@@ -27,13 +27,13 @@ div#banner-one
       img(src='../../../assets/images/man_tablet.svg' class='banner-one-img up')
   div.banner-one-breadcrumbs
     if Breadcrumb1
-      span.banner-one-breadcrumb #{Breadcrumb1category} 
+      a(class='banner-one-breadcrumb' href='https://taskbooker.be/') #{Breadcrumb1category} 
     if Breadcrumb2
       div.inner-breadcrumb
         <i class="material-icons bc">chevron_right</i>
-        span.banner-one-breadcrumb #{Breadcrumb2category}
+        a(class='banner-one-breadcrumb' href='https://taskbooker.be/') #{Breadcrumb2category}
     if Breadcrumb3
       div.inner-breadcrumb
         <i class="material-icons bc">chevron_right</i>
-        span.banner-one-breadcrumb #{Breadcrumb3category}
-      
+        a(class='banner-one-breadcrumb' href='https://taskbooker.be/') #{Breadcrumb3category}
+button(class='sticky-btn')= CTAtext  

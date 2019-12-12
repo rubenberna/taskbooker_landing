@@ -1,0 +1,30 @@
+.banner-five-wrapper-container-title {
+  margin-bottom: 92px;
+  font-size: 52px;
+  line-height: 65px;
+  text-align: center;
+  font-weight: 700;
+  color: --thunder;
+}
+
+.banner-five-wrapper-container-row {
+  padding: 0px 150px;
+}
+
+.banner-five-wrapper {
+  padding-top: 50px;
+  position: relative;
+  height: 72vh;
+}
+
+.banner-five-wrapper-container-tasks {
+  display: block;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 9;
+}
+
+.paragraph {
+  margin: 28px 20px;
+}

@@ -3,6 +3,9 @@
 @import "../../components/layout/layout.css";
 @import "../../components/banners/bannerOne/style.css";
 @import "../../components/banners/bannerTwo/style.scss";
+@import "../../components/banners/bannerFive/style.scss";
+@import "../../components/banners/bannerSix/style.scss";
+
 body {
   font-family: 'Gilroy', sans-serif;
 }
@@ -24,7 +27,6 @@ body {
 
 ul { list-style-type: none;}
 
-.paragraph { margin:6px 20px; }
 .title {font-size:20px; font-weight: bold;}
 .subtitle {font-size:16px;}
 

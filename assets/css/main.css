@@ -2,10 +2,10 @@
 @import "./_variables.css";
 @import "../../components/layout/layout.css";
 @import "../../components/banners/bannerOne/style.css";
-@import "../../components/banners/bannerTwo/style.scss";
+@import "../../components/banners/bannerTwo/style.css";
 @import "../../components/banners/bannerThree/style.css";
-@import "../../components/banners/bannerFive/style.scss";
-@import "../../components/banners/bannerSix/style.scss";
+@import "../../components/banners/bannerFive/style.css";
+@import "../../components/banners/bannerSix/style.css";
 
 body {
   font-family: 'Gilroy', sans-serif;

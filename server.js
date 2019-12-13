@@ -3,6 +3,7 @@ require('dotenv').config();
 let app = express();
 let data = require('./data.js');
 let loadContent = require('./apis/mongodb');
+let fetchTaskers = require('./apis/taskers');
 
 app.use(express.static('.'));
 
@@ -17,6 +18,7 @@ app.get('*', async (req, res) => {
     } else {
         let key = `www.taskbooker.be${req.params[0]}`
         const data = await loadContent(key)
+        fetchTaskers()
       if (data)
         res.render('index', { ...data[0] });
       else

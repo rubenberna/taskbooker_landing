@@ -15,12 +15,10 @@ app.get('*', async (req, res) => {
       console.log("responding with file");
       res.sendFile(req.params[0]);
     } else {
-      // map the params to the data
-      let key = `www.taskbooker.be${req.params[0]}`
-      const data = await loadContent(key)
-      if (data) {
+        let key = `www.taskbooker.be${req.params[0]}`
+        const data = await loadContent(key)
+      if (data)
         res.render('index', { ...data[0] });
-      }
       else
         res.end('invalid params');
     }

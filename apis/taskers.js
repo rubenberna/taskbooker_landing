@@ -39,7 +39,9 @@ const params = gql`
 const fetchTaskers = async () => {
   try {
     const data = await client.query({ query: params})
-    console.log(data);
+    const obj = Object.values(data)[0]
+    const taskers = obj.listActiveUsers.records.nodes
+    return taskers
   } catch (e) {
     console.log('error: ', e);
   }

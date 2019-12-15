@@ -1,3 +1,7 @@
+import React from "react";
+import { hydrate } from "react-dom";
+
+
 const q = `
 {
   listActiveUsers(filter:{categoryIds:["b591a956-10aa-4bfb-bad4-92ddfb8b81a6"]}) {
@@ -26,4 +30,4 @@ fetch('https://api.stg.taskbooker.be/public/graphql', { method:'POST', headers:{
 .then((t) => {
     let App = ({taskers}) => <div>{JSON.stringify(taskers)} </div>
     ReactDOM.render(<App taskers={t} />, document.querySelector("#app"));
-}); 
+});

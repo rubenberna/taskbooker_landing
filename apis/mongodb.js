@@ -1,5 +1,6 @@
 const mongodb = require('mongodb');
 const MongoClient = require('mongodb').MongoClient;
+const testdata = require('../data.js');
 
 const url = process.env.MONGODB_URL
 const dbName = process.env.MONGODB_DB_NAME
@@ -17,4 +18,9 @@ const loadContent = async (key) => {
 }
 
 
-module.exports = loadContent
+// module.exports = loadContent
+
+module.exports = (key) => {
+  let k = key.replace(/\//g, "_").replace(/\./g, "_");
+  return Promise.resolve([testdata["content"][k]]);
+}

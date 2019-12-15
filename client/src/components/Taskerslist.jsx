@@ -1,9 +1,10 @@
 let React = require('react');
 
-const TaskersList = () => {
+const TaskersList = ({taskers}) => {
+  console.log(taskers);
   return(
-    <div>
-      Hello
+    <div className='container'>
+      <h1>TaskersList</h1>
     </div>
   )
 }

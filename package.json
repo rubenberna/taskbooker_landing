@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "start": "webpack && node server.js"
+    "wp-server": "node server.js",
+    "start-watch": "webpack --watch",
+    "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run wp-server\""
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-react": "^6.24.1",
+    "concurrently": "^5.0.1",
     "nodemon": "^2.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

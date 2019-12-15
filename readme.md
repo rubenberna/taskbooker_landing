@@ -1,8 +1,8 @@
 To start, checkout this repo
 
 then do:
-1. npm init
-1. node server.js
+1. npm install
+2. npm run start
 
 
 try some urls like:

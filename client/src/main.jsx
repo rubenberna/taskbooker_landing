@@ -1,4 +1,8 @@
 
+let React = require('react');
+let ReactDOM = require('react-dom');
+
+
 const q = `
 {
   listActiveUsers(filter:{categoryIds:["b591a956-10aa-4bfb-bad4-92ddfb8b81a6"]}) {

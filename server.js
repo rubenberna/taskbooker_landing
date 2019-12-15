@@ -1,13 +1,16 @@
 let express = require('express');
+let path = require('path');
+
 require('dotenv').config();
 let app = express();
-let loadContent = require('./apis/mongodb');
+let loadContent = require('./server/apis/mongodb');
 // let fetchTaskers = require('./apis/taskers');
 
-app.use(express.static('.'));
+app.use(express.static('./dist'));
 
 // Load view engine
 app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, '/server/views'));
 
 app.get('*', async (req, res) => {
     if (req.params[0].indexOf('.') > 0) {
@@ -22,7 +25,7 @@ app.get('*', async (req, res) => {
         res.end('invalid params');
     }
   })
-  app.get('/sitemap.xml', (req, res) => (
+  app.get('/server/sitemap.xml', (req, res) => (
     res.status(200).sendFile('sitemap.xml')
   ));
 app.listen(3131, () => {

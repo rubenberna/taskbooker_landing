@@ -2,7 +2,7 @@
  var webpack = require('webpack');
 
  module.exports = {
-  entry: './client/src/main.jsx',
+  entry: ['./client/src/main.jsx', './client/src/index.jsx'],
   module: {
     rules: [
       {

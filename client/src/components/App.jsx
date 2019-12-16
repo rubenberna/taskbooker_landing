@@ -16,8 +16,9 @@ class App extends React.Component {
   // location has a postcode (i.e. "2680"), which we use to get the city or coords, and subcategory to fetch taskers
   async componentDidMount() {
     let URLParams = window.location.pathname.split('/')
-    let categoryToBeSearched = /[0-9]/.test(URLParams[URLParams.length -1]) ? URLParams[URLParams.length -2] : URLParams[URLParams.length -1]
-    let location = /[0-9]/.test(URLParams[URLParams.length -1]) ? URLParams[URLParams.length -1] : await this.fetchCoordinates()
+    const lastParam = URLParams[URLParams.length -1]
+    let categoryToBeSearched = /[0-9]/.test(lastParam) ? URLParams[URLParams.length -2] : lastParam
+    let location = /[0-9]/.test(lastParam) ? lastParam : await this.fetchCoordinates()
 
     const filters = {
       categoryToBeSearched,

@@ -89,6 +89,7 @@ a.banner-one-breadcrumb {
   color: var(--accent-color);
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .inner-breadcrumb {

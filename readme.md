@@ -2,7 +2,7 @@ To start, checkout this repo
 
 then do:
 1. npm install
-2. npm run start
+2. npm run dev
 
 
 try some urls like:

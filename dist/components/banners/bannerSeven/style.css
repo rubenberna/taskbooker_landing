@@ -1,0 +1,119 @@
+.bannerSeven-download {
+    padding: 66px 0 73px;
+    background-color: var(--vista-white);
+  }
+
+  .bannerSeven-cta {
+    padding: 66px 0 73px;
+    background-color: var(--lightGreen);
+  }
+
+.bannerSeven-download-containerWrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
+}
+
+.bannerSeven-cta-containerWrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
+}
+
+.bannerSeven-download-containerWrapper-row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.bannerSeven-cta-containerWrapper-row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.bannerSeven-download-containerWrapper-row-buttons {
+    padding: 50px 0 82px;
+}
+
+.bannerSeven-download-containerWrapper-title {
+    margin-bottom: 28px;
+    font-size: 52px;
+    line-height: 65px;
+    font-weight: 700;
+    text-align: center;
+    color: #3d2c3a;
+}
+
+.bannerSeven-cta-containerWrapper-title {
+    margin-bottom: 28px;
+    font-size: 52px;
+    line-height: 65px;
+    font-weight: 700;
+    text-align: left;
+    color: #3d2c3a;
+}
+
+.bannerSeven-download-containerWrapper-description {
+    margin-bottom: 47px;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    color: #3d2c3a;
+}
+
+.bannerSeven-cta-containerWrapper-description {
+    margin-bottom: 47px;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: left;
+    color: #3d2c3a;
+}
+
+.bannerSeven-download-containerWrapper-buttons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-evenly !important;
+    max-width: 870px;
+    margin: 0 auto;
+}
+
+.bannerSeven-download-containerWrapper-buttons a {
+    max-width: calc(50% - 20px);
+}
+
+.bannerSeven-download-containerWrapper-buttons-download-appstore img {
+    max-height: 113px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.bannerSeven-download-containerWrapper-buttons-download-googleplay img {
+    max-height: 113px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.bannerSeven-cta-containerWrapper-button {
+    cursor: pointer !important;
+    float: right;
+    text-align: center;
+    z-index: 9999;
+    border-radius: 6px;
+    padding: 15px;
+    background: var(--denim);
+    color: var(--white);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    min-width: 405px;
+    margin: -70px 90px 0 0;
+    font-size: 25px;
+}
+
+.bannerSeven-cta-containerWrapper-description a{
+    color: var(--turquoise) !important;
+    text-decoration: none !important;
+}

@@ -9,7 +9,8 @@ const getTaskers = async obj => {
           avatar {
             url
           },
-             prettyName,
+          prettyName,
+          price,
           rating,
           description,
           categories {

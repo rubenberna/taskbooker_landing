@@ -33,7 +33,7 @@ const TaskersList = ({ taskers }) => {
                                 {tasker.prettyName}
                               </h4>
                               <div className="banner-four-singlestarrating-ratingcount">
-                           {tasker.rating ==5 ? <div key={index} className="starFull" /> : tasker.rating >=1 ?<div  className="starHalf" /> :  <div  className="starEmpty"/> }
+                           {tasker.rating ==5 ? <div key={index} className="star-full" /> : tasker.rating >=1 ?<div  className="star-half" /> :  <div  className="star-empty"/> }
                                <span className="banner-four-singlestarrating-ratingcount-text">{tasker.rating}.0</span>
                                </div>
                               <p className="banner-four-wrapper-container-rating-ratinginforow_ratingvalue">

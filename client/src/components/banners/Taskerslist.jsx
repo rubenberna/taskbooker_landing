@@ -1,12 +1,11 @@
 let React = require("react");
 const TaskersList = ({ taskers }) => {
-  console.log(taskers);
   return (
     <section className="banner-four">
       <div className="banner-four-wrapper-container">
         <div className="banner-four-wrapper-container-row">
           <h2 className="banner-four-wrapper-container-title">
-            Wat onze gebruikers zeggen<div className="banner-four-wrapper-container-rating">
+           <div className="banner-four-wrapper-container-rating">
               <div className="banner-four-wrapper-container-rating-tasker-taskerwrapper">
                 {taskers.map((tasker, i) =>
                   <div

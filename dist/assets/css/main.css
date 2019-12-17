@@ -4,6 +4,7 @@
 @import "../../components/banners/bannerOne/style.css";
 @import "../../components/banners/bannerTwo/style.css";
 @import "../../components/banners/bannerThree/style.css";
+@import "../../components/banners/bannerFour/style.css";
 @import "../../components/banners/bannerFive/style.css";
 @import "../../components/banners/bannerSix/style.css";
 @import "../../components/banners/bannerSeven/style.css";
@@ -36,7 +37,6 @@ img { padding-top:20px;}
 
 #headlinecontainer { padding:40px 20px; display:flex;flex-flow:column;align-items:center;justify-content:center;}
 #headline, #HeadlineDynamicContent { font-size:20px; font-weight: bold;}
-.container {display:flex;flex-flow:column;align-items:center}
 .containerrow {padding:20px 10px; margin:40px 100px; border:1px solid black;display:flex;flex-flow:row;justify-content:center; align-items:center}
 .spacer { height:100px;width:100px;}
 

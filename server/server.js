@@ -16,7 +16,8 @@ app.get('*', async (req, res) => {
       res.sendFile(req.params[0]);
     } else {
         let key = `www.taskbooker.be${req.params[0]}`
-        let content = await loadContent(key)
+        const content = await loadContent(key)
+        
       if (content)
         res.render('index', { ...content[0] });
       else

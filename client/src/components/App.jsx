@@ -54,11 +54,8 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <TaskersList taskers={this.state.taskers}/>
-      </div>
-    );
+    return  <TaskersList taskers={this.state.taskers}/>
+   
   }
 }
 module.exports = App;

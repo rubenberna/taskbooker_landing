@@ -1,7 +1,6 @@
 let React = require("react");
 const TaskersList = ({ taskers }) => {
   console.log(taskers);
-<<<<<<< HEAD
   return (
     <section className="banner-four">
       <div className="banner-four-wrapper-container">
@@ -84,13 +83,5 @@ const TaskersList = ({ taskers }) => {
     </section>
   );
 };
-=======
-  return(
-    <div className='container'>
-      <h1>React One</h1>
-    </div>
-  )
-}
->>>>>>> 2578b273177cc231052f559aec7de087e8eb0c72
 
 module.exports = TaskersList;

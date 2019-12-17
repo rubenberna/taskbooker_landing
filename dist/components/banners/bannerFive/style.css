@@ -7,9 +7,6 @@
   color:var(--thunder);
 }
 
-.banner-five-wrapper-container-row {
-  padding: 0px 150px;
-}
 
 .banner-five-wrapper {
   padding-top: 50px;
@@ -27,4 +24,15 @@
 
 .paragraph {
   margin: 28px 20px;
+}
+.banner-five-wrapper-container{
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+@media (min-width: 1200px) {
+  .banner-five-wrapper-container{
+      max-width: 1170px;
+  }
 }

@@ -9,12 +9,13 @@
   margin-left: auto;
 }
 .banner-four-wrapper-container-title{
-  margin-bottom: 92px;
   font-size: 52px;
   line-height: 65px;
   text-align: center;
   font-weight: 700;
   color:var(--thunder);
+  background: var(--vista-white);
+  margin: 0;
 }
 @media (min-width: 1200px){
   .banner-four-wrapper-container {
@@ -50,7 +51,7 @@
 .banner-four-wrapper-container-rating-card-cardwrapper {
   padding: 20px;
   background: #fff;
-  border: 1px solid #ead9ce;
+  border: 1px solid var(--vista-white);
   border-radius: 10px;
   margin: 7.5px;
   height: -webkit-fit-content;

@@ -1,6 +1,6 @@
 let React = require('react');
 let getTaskers = require('../../../server/apis/taskers');
-let TaskersList = require('./Taskerslist');
+let TaskersList = require('./banners/Taskerslist');
 
 class App extends React.Component {
   constructor() {
@@ -54,11 +54,8 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <TaskersList taskers={this.state.taskers}/>
-      </div>
-    );
+    return  <TaskersList taskers={this.state.taskers}/>
+
   }
 }
 module.exports = App;

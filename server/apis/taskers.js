@@ -12,6 +12,7 @@ const getTaskers = async obj => {
           prettyName,
           price,
           rating,
+          price,
           description,
           categories {
               nodes {
@@ -22,11 +23,15 @@ const getTaskers = async obj => {
       }
     }
   }
-  `
+  `;
 
-  return fetch('https://api.stg.taskbooker.be/public/graphql', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ query: q })})
-  .then((response) => response.json())
-  .then((t) => t.data.listActiveUsers.records.nodes)
-}
+  return fetch("https://api.stg.taskbooker.be/public/graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: q })
+  })
+    .then(response => response.json())
+    .then(t => t.data.listActiveUsers.records.nodes);
+};
 
-module.exports = getTaskers
+module.exports = getTaskers;

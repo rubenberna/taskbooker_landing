@@ -83,12 +83,21 @@ button.large-btn:hover {
   bottom: 10px;
 }
 
-a.banner-one-breadcrumb {
+a.banner-one-breadcrumb-live {
   margin-right: 15px;
   font-size: 18px;
   color: var(--accent-color);
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+}
+
+a.banner-one-breadcrumb-dead {
+  margin-right: 15px;
+  font-size: 18px;
+  color: var(--thunder);
+  cursor: default;
+  text-decoration: none;
 }
 
 .inner-breadcrumb {

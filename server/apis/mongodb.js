@@ -23,4 +23,8 @@ module.exports = loadContent
 // module.exports = (key) => { 
 //   let k = key.replace(/\//g, "_").replace(/\./g, "_");
 //   return Promise.resolve([testdata["content"][k]]);
+<<<<<<< HEAD
 // } 
+=======
+// }
+>>>>>>> 2578b273177cc231052f559aec7de087e8eb0c72

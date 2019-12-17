@@ -11,6 +11,7 @@ const loadContent = async (key) => {
     const client = await mongodb.MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
     const collection = client.db(dbName).collection(colName)
     const data = await collection.find({URL: key}).toArray()
+    console.log(data)
     return data
   } catch (e) {
     console.log(e);

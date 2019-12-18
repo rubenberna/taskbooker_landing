@@ -1,3 +1,4 @@
+
 const getTaskers = async obj => {
   console.log("tasker: ", obj);
   const q = `
@@ -24,14 +25,16 @@ const getTaskers = async obj => {
     }
   }
   `;
+  const apiKey = process.env.TASKBOOKER_API_KEY
 
-  return fetch("https://api.stg.taskbooker.be/public/graphql", {
+  console.log(apiKey);
+  return fetch("https://api.stg.taskbooker.be/graphql", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", "Api-Key": apiKey},
     body: JSON.stringify({ query: q })
   })
     .then(response => response.json())
-    .then(t => t.data.listActiveUsers.records.nodes);
+    .then(t => t.data.listActiveUsers.records.nodes)
 };
 
 module.exports = getTaskers;

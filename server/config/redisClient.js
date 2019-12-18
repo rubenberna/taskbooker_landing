@@ -14,7 +14,7 @@ module.exports = {
     sendResponse(key)
   },
 
-  fetchPageContent: async key => {
+  fetchPageContent: async (key) => {
     let data = await client.get(key)
     return JSON.parse(data)
   }

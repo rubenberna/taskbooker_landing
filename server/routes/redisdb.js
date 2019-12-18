@@ -9,4 +9,9 @@ router.post('/', async (req, res) => {
   res.status(200).send(shortlist)
 })
 
+router.post('/filter', async (req, res) => {
+  const filters = req.body
+  let tableContent = await redisClient.fitlerTable(filters)
+  res.status(200).send(tableContent)
+})
 module.exports = router;

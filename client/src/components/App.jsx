@@ -34,17 +34,17 @@ class App extends React.Component {
       maximumAge: 0
     };
     return new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(resolve, reject, options);
+      navigator.geolocation.getCurrentPosition(resolve, reject, options);
     });
   }
 
   async fetchCoordinates(){
     try {
-        const { coords } = await this.getCurrentPosition();
-        const { latitude, longitude } = coords;
-        return { latitude, longitude }
+      const { coords } = await this.getCurrentPosition();
+      const { latitude, longitude } = coords;
+      return { latitude, longitude }
     } catch (error) {
-        return error
+      return error
     }
   }
 
@@ -55,7 +55,6 @@ class App extends React.Component {
 
   render() {
     return  <TaskersList taskers={this.state.taskers}/>
-
   }
 }
 module.exports = App;

@@ -1,6 +1,8 @@
 const React = require('react');
 const axios = require('axios');
 
+const limitResults = 200
+
 class FilterTable extends React.Component {
   constructor() {
     super();
@@ -12,7 +14,7 @@ class FilterTable extends React.Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get('/queryRedis')
+    const res = await axios.post('/queryRedis', {limitResults})
     const data  = res.data
     console.log(data);
     this.setState({ list: data })

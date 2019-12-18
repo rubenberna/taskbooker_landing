@@ -1,16 +1,17 @@
-let express = require('express');
+const express = require('express');
 require('dotenv').config();
-let path = require('path');
-let app = express();
+const app = express();
+const path = require('path');
 const redisClient = require('./config/redisClient');
 const mongodb = require('./apis/mongodb');
 const PORT = process.env.PORT || 3131
 
+app.use(express.static('./dist'));
+app.use(express.json());
+
 // load routes
 const queryRedis = require('./routes/redisdb');
 app.use('/queryRedis', queryRedis)
-
-app.use(express.static('./dist'));
 
 // Load view engine
 app.set('view engine', 'pug');

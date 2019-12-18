@@ -7,7 +7,7 @@ const fetch = require('node-fetch');
 const PORT = process.env.PORT || 3131
 const REDIS_PORT = process.env.PORT || 6379
 
-const loadContent = require('./apis/mongodb');
+const mongodb = require('./apis/mongodb');
 const client = redis.createClient({port: REDIS_PORT, password: 'aljezur99'});
 const redisClient = require('./config/redisClient');
 
@@ -22,10 +22,13 @@ async function getContent(req, res, next) {
   if (req.params[0].indexOf('.') > 0) {
       res.sendFile(req.params[0]);
   } else {
+    console.log('get content');
     let key = `www.taskbooker.be${req.params[0]}`
-    let content = await loadContent(key)
+    let content = await mongodb.loadPageContent(key)
+    let tableContent = await mongodb.getTableContent()
     if (content){
-      redisClient.setContent(key, JSON.stringify(content[0]))
+      redisClient.setPageContent(key, JSON.stringify(content[0]))
+      redisClient.setPageContent('tableContent', JSON.stringify(tableContent))
       res.render('index', { ...content[0] });
     }
     else res.send('invalid params');
@@ -33,9 +36,11 @@ async function getContent(req, res, next) {
 }
 
 async function cache(req, res, next) {
+  console.log('cache');
   let key = `www.taskbooker.be${req.params[0]}`
-  let data = await redisClient.fetchContent(key)
-  if(data !== null) res.render('index', {...data})
+  let pageContent = await redisClient.fetchPageContent(key)
+  let tablecontent = await redisClient.fetchPageContent('tableContent')
+  if(pageContent !== null) res.render('index', {...pageContent})
   else next()
 }
 

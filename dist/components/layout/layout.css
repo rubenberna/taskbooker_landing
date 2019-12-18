@@ -96,7 +96,7 @@ a {
     line-height: 25px;
     text-decoration: none;
     margin-bottom: 30px;
-    color: #3d2c3a;
+    color: var(--thunder);
 }
 
 .footer-container-wrappercontainer-wrapperservice {
@@ -121,7 +121,7 @@ a {
 .footer-container-wrappercontainer-sharecard_socialiconwrapper {
 
     display: flex;
-    background-color: #ede0d7;
+    background-color:var(--powder);
     border-radius: 3px;
     padding: 10px;
     height: 32px;

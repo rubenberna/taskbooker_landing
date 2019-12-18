@@ -4,7 +4,7 @@ const TaskersList = ({ taskers }) => {
     <section className="banner-four">
       <div className="banner-four-wrapper-container">
         <div className="banner-four-wrapper-container-row">
-          <h2 className="banner-four-wrapper-container-title">
+       
            <div className="banner-four-wrapper-container-rating">
               <div className="banner-four-wrapper-container-rating-tasker-taskerwrapper">
                 {taskers.map((tasker, i) =>
@@ -76,7 +76,7 @@ const TaskersList = ({ taskers }) => {
                 )}
               </div>
             </div>
-          </h2>
+       
         </div>
       </div>
     </section>

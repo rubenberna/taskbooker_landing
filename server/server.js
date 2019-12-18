@@ -1,16 +1,14 @@
 let express = require('express');
-let path = require('path');
 require('dotenv').config();
+let path = require('path');
 let app = express();
-const redis = require('redis');
-const fetch = require('node-fetch');
-const PORT = process.env.PORT || 3131
-const REDIS_PORT = process.env.PORT || 6379
-
-const mongodb = require('./apis/mongodb');
-const client = redis.createClient({port: REDIS_PORT, password: 'aljezur99'});
 const redisClient = require('./config/redisClient');
+const mongodb = require('./apis/mongodb');
+const PORT = process.env.PORT || 3131
 
+// load routes
+const queryRedis = require('./routes/redisdb');
+app.use('/queryRedis', queryRedis)
 
 app.use(express.static('./dist'));
 

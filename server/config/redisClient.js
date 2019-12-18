@@ -1,8 +1,7 @@
 const asyncRedis = require("async-redis");
-const fetch = require('node-fetch');
 const REDIS_PORT = process.env.PORT || 6379
 
-const client = asyncRedis.createClient({port: REDIS_PORT, password: 'aljezur99'});
+const client = asyncRedis.createClient({port: REDIS_PORT, password: process.env.REDIS_PASSWORD});
 
 const sendResponse = (key) => {
   console.log(`Set ${key} in redis`);

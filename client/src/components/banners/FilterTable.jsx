@@ -8,8 +8,8 @@ class FilterTable extends React.Component {
     super();
     this.state = {
       list: [],
-      category: '',
-      city: ''
+      category: 'evenementen',
+      city: 'aartselaar-2630'
     }
   }
 
@@ -27,17 +27,42 @@ class FilterTable extends React.Component {
     this.filterResults()
   }
 
-  async filterResults(){
-    // 1. filter array based on state
-    // 2. set state list based on new array
+  async filterResults() {
+    const { category, city } = this.state
+    const res = await axios.post('/queryRedis/filter', {category, city})
+    const data  = res.data
+    this.setState({ list: data })
   }
 
   render() {
     const { list } = this.state
     return(
-      <div>
-        <button onClick={e => this.addFilter('category', 'wiskunde')  }>Filter</button>
-        {list.map(item => <p key={item._id}>{item.URL}</p>)}
+      <div className='container'>
+        <button onClick={ this.filterResults.bind(this) }>Filter</button>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">URL</th>
+              <th scope="col">Breadcrumb1</th>
+              <th scope="col">Breadcrumb2</th>
+              <th scope="col">Breadcrumb3</th>
+              <th scope="col">CityPostalcode</th>
+            </tr>
+          </thead>
+          <tbody>
+        {list.map((item, i) =>
+          <tr key={item._id}>
+            <td>{i}</td>
+            <td>{item.URL}</td>
+            <td>{item.Breadcrumb1}</td>
+            <td>{item.Breadcrumb2}</td>
+            <td>{item.Breadcrumb3}</td>
+            <td>{item.CityPostalcode}</td>
+          </tr>
+        )}
+        </tbody>
+        </table>
       </div>
     )
   }

@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-boost": "^0.4.4",
+    "async-redis": "^1.1.7",
     "axios": "^0.19.0",
     "cross-fetch": "^3.0.4",
     "dotenv": "^8.2.0",
@@ -21,7 +22,9 @@
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
     "mongodb": "^3.4.0",
-    "pug": "^2.0.4"
+    "node-fetch": "^2.6.0",
+    "pug": "^2.0.4",
+    "redis": "^2.8.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

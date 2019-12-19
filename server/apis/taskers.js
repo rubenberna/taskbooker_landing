@@ -29,7 +29,7 @@ const getTaskers = async obj => {
   const apiKey = process.env.TASKBOOKER_API_KEY
   return fetch("https://api.stg.taskbooker.be/graphql", {
     method: "POST",
-    headers: { "Content-Type": "application/json", "Api-Key": apiKey},
+    headers: { "Content-Type": "application/json", "Api-Key": '842dfab3161e804f58364a7ac6347e34'},
     body: JSON.stringify({ query: q })
   })
     .then(response => response.json())

@@ -1,44 +1,96 @@
-const React = require('react');
-const axios = require('axios');
+const React = require("react");
+const axios = require("axios");
 
-const limitResults = 200
+const limitResults = 200;
 
 class FilterTable extends React.Component {
   constructor() {
     super();
     this.state = {
+      citiesPostalcode: [],
+      categories: [],
       list: [],
-      category: 'evenementen',
-      city: 'aartselaar-2630'
-    }
+      category: "",
+      city: ""
+    };
   }
 
   async componentDidMount() {
-    const res = await axios.post('/queryRedis', {limitResults})
-    const data  = res.data
-    console.log(data);
-    this.setState({ list: data })
+    try {
+      const res = await axios.post("/queryRedis", { limitResults });
+      this.filterData(res.data);
+      const {categories,citiesPostalcode} = this.state;
+      this.setState({category:categories[0],cityCodePostal : citiesPostalcode[0]});
+      this.getData(this.state.category,this.state.cityCodePostal);
+    } catch (error) {
+      console.log("manar", error);
+    }
   }
 
-  addFilter(name, value) {
-    let change = {}
-    change[name] = value
-    this.setState({ change })
-    this.filterResults()
+  handleCategory(e) {
+    const { cityCodePostal } = this.state;
+    this.getData(e.target.value, cityCodePostal);
+  }
+  handleCity(e) {
+    const { category } = this.state;
+    this.getData(category, e.target.value);
   }
 
-  async filterResults() {
-    const { category, city } = this.state
-    const res = await axios.post('/queryRedis/filter', {category, city})
-    const data  = res.data
-    this.setState({ list: data })
+  filterData(arr) {
+    let categoryList = [],
+      cityCodePostalList = [];
+    arr.map(obj => {
+      for (let i = 1; i <= 3; i++) {
+        const value = obj["Breadcrumb" + i];
+        if (value != "" && !categoryList.includes(value)) {
+          categoryList.push(value);
+        }
+      }
+      const codePostal = obj.CityPostalcode;
+      if (codePostal != "" && !cityCodePostalList.includes(codePostal)) {
+        cityCodePostalList.push(codePostal);
+      }
+    });
+    this.setState({
+      categories: categoryList,
+      citiesPostalcode: cityCodePostalList
+    });
+  }
+
+  async getData(category, city) {
+    try {
+      const res = await axios.post("/queryRedis/filter", { category, city });
+      const data = res.data;
+      this.setState({ list: data });
+    } catch (error) {
+      console.log("manar", error);
+    }
   }
 
   render() {
-    const { list } = this.state
-    return(
-      <div className='container'>
-        <button onClick={ this.filterResults.bind(this) }>Filter</button>
+    const { categories, citiesPostalcode,list } = this.state;
+    return (
+      <div className="container">
+        <label>
+          Activity
+          <select onChange={this.handleCategory.bind(this)}>
+            {categories.map(category =>
+              <option key={category} value={category}>
+                {category}
+              </option>
+            )}
+          </select>
+        </label>
+        <label>
+          City
+          <select onChange={this.handleCity.bind(this)}>
+            {citiesPostalcode.map(cityCodePostal =>
+              <option key={cityCodePostal} value={cityCodePostal}>
+                {cityCodePostal}
+              </option>
+            )}
+          </select>
+        </label>
         <table class="table">
           <thead>
             <tr>
@@ -51,20 +103,32 @@ class FilterTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-        {list.map((item, i) =>
-          <tr key={item._id}>
-            <td>{i}</td>
-            <td>{item.URL}</td>
-            <td>{item.Breadcrumb1}</td>
-            <td>{item.Breadcrumb2}</td>
-            <td>{item.Breadcrumb3}</td>
-            <td>{item.CityPostalcode}</td>
-          </tr>
-        )}
-        </tbody>
+            {list.map((item, i) =>
+              <tr key={item._id}>
+                <td>
+                  {i}
+                </td>
+                <td>
+                  {item.URL}
+                </td>
+                <td>
+                  {item.Breadcrumb1}
+                </td>
+                <td>
+                  {item.Breadcrumb2}
+                </td>
+                <td>
+                  {item.Breadcrumb3}
+                </td>
+                <td>
+                  {item.CityPostalcode}
+                </td>
+              </tr>
+            )}
+          </tbody>
         </table>
       </div>
-    )
+    );
   }
 }
 

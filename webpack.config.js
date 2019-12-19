@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var dotenv = require('dotenv').config({path: __dirname + '/.env'});
 
 module.exports = {
  entry: './client/src/main.jsx',
@@ -18,6 +19,11 @@ module.exports = {
      }
    ]
  },
+ plugins: [
+   new webpack.DefinePlugin({
+        'process.env.TASKBOOKER_API_KEY': JSON.stringify(process.env.TASKBOOKER_API_KEY)
+    }),
+  ],
  resolve: {
    extensions: ['*', '.js', '.jsx']
  },

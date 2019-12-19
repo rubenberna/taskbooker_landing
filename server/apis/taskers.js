@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 
 const getTaskers = async obj => {
   console.log("tasker: ", obj);
@@ -26,8 +27,6 @@ const getTaskers = async obj => {
   }
   `;
   const apiKey = process.env.TASKBOOKER_API_KEY
-
-  console.log(apiKey);
   return fetch("https://api.stg.taskbooker.be/graphql", {
     method: "POST",
     headers: { "Content-Type": "application/json", "Api-Key": apiKey},

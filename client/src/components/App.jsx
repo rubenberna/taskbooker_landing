@@ -1,6 +1,7 @@
-let React = require('react');
-let getTaskers = require('../../../server/apis/taskers');
-let TaskersList = require('./banners/Taskerslist');
+const React = require('react');
+const axios = require('axios');
+const getTaskers = require('../../../server/apis/taskers');
+const TaskersList = require('./banners/Taskerslist');
 
 class App extends React.Component {
   constructor() {

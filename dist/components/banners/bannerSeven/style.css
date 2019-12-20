@@ -1,4 +1,15 @@
-.bannerseven-download-containerwrapper {
+
+.bannerSeven-download {
+    padding: 66px 0 73px;
+    background-color: #FFFFF;
+  }
+
+  .bannerSeven-cta {
+    padding: 66px 0 73px;
+    background-color: var(--lightGreen);
+  }
+
+.bannerSeven-download-containerWrapper {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -55,5 +66,25 @@ align-items: center;
 .bannerseven-download-containerWrapper-entry{
     padding: 95px 0;
 
+.bannerSeven-cta-containerWrapper-button {
+    cursor: pointer !important;
+    float: right;
+    text-align: center;
+    z-index: 9999;
+    border-radius: 6px;
+    padding: 15px;
+    background: var(--denim);
+    color: var(--white);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    max-width: 360px;
+    margin: -70px 90px 0 0;
+    font-size: 25px;
+
 }
+
+.bannerSeven-cta-containerWrapper-description a{
+    color: var(--turquoise) !important;
+    text-decoration: none !important;
 }

@@ -79,3 +79,7 @@
 .seo-pages-cities-select span{
   padding: 10px;
 }
+
+option {
+  text-transform: capitalize;
+}

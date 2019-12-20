@@ -25,6 +25,10 @@ h1.banner-one-container-text-header {
   font-weight: 600;
 }
 
+ul.banner-one-container-text-bullets {
+  list-style-type: none;
+}
+
 li.bullet {
   font-size: 26px;
   margin-bottom: 32px;
@@ -86,7 +90,7 @@ button.large-btn:hover {
 a.banner-one-breadcrumb-live {
   margin-right: 15px;
   font-size: 18px;
-  color: var(--accent-color);
+  color: #03A9F4;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;

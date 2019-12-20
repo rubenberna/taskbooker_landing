@@ -20,12 +20,11 @@ module.exports = {
   },
 
   fitlerTable: async filters => {
-    const category = filters.category || ''
-    const city = filters.city || ''
+    const { selectedCategory, selectedCity } = filters
     let data = await client.get('tableContent')
     let array = await JSON.parse(data)
-    let filteredResults = await array.filter(t => t.CityPostalcode === city && (t.Breadcrumb1 === category || t.Breadcrumb2 === category ||  t.Breadcrumb3 === category))
-
+    console.log('array: ', selectedCategory, selectedCity);
+    let filteredResults = await array.filter(t => t.CityPostalcode === selectedCity && (t.Breadcrumb1 === selectedCategory || t.Breadcrumb2 === selectedCategory ||  t.Breadcrumb3 === selectedCategory))
     return filteredResults
   }
 }

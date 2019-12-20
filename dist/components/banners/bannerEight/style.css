@@ -1,10 +1,81 @@
-.city-select,.activity-select{
+.select{
   height: 50px;
   border-radius: 6px;
   line-height: 51px;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+  -webkit-appearance: none;
+  border: 1px solid #dfe1e5;
+  border-radius: 6px;
+  background-color: white;
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  border-radius: 2px;
+  color: var(--black);
+  padding: 0px 30px 10px 10px;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+}
+.select:focus{
+  height: 50px;
+  border-radius: 6px;
+  line-height: 51px;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_up.png) no-repeat right #ddd;
+  -webkit-appearance: none;
+  border: 1px solid #dfe1e5;
+  border-radius: 6px;
+  background-color: white;
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  border-radius: 2px;
+  color: var(--black);
+  padding: 0px 30px 10px 10px;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 .container-select{
   display: flex;
   padding: 40px;
   justify-content: space-between;
+}
+.seo-pages-cities-list{
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  height: 400px;
+  overflow: hidden;
+  display: block;
+  list-style: none;
+  text-align: left;
+
+}
+.seo-pages-cities-item{
+
+  border-left: 3px solid #f5eef3;
+  padding: 0 3em 0 .75em;
+
+}
+.seo-pages-cities-item a{
+  text-decoration: none;
+  color: var(--black);
+
+}
+.seo-pages-cities-select{
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 2.5%;
+  display: flex;
+  justify-content: space-around;
+}
+.seo-pages-cities-select span{
+  padding: 10px;
 }

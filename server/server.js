@@ -38,7 +38,6 @@ async function cache(req, res, next) {
   console.log('cache');
   let key = `www.taskbooker.be${req.params[0]}`
   let pageContent = await redisClient.fetchPageContent(key)
-  let tablecontent = await redisClient.fetchPageContent('tableContent')
   if(pageContent !== null) res.render('index', {...pageContent})
   else next()
 }

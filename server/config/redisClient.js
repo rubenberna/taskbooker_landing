@@ -2,35 +2,44 @@ const asyncRedis = require("async-redis");
 var redis = require('redis');
 const REDIS_PORT = process.env.PORT || 6379
 
-const client = process.env.NODE_ENV === "development" ? asyncRedis.createClient({port: REDIS_PORT, password: process.env.REDIS_PASSWORD}) : asyncRedis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true});
-
-// function defineClient() {
-//   if(process.env.NODE_ENV !== 'production') asyncRedis.createClient({port: REDIS_PORT, password: process.env.REDIS_PASSWORD})
-//   else asyncRedis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true});
-// }
+async function defineClient() {
+  if(process.env.NODE_ENV !== 'production') {
+    const client = await asyncRedis.createClient({port: REDIS_PORT, password: process.env.REDIS_PASSWORD})
+    return client
+  }
+  else {
+    const client = await asyncRedis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true});
+    return client
+  }
+}
 
 const sendResponse = (key) => {
   console.log(`Set ${key} in redis`);
 }
 
 module.exports = {
-  setPageContent: (key, data) => {
+  setPageContent: async (key, data) => {
     // set in redis the key, expiration (1h) and the value
+    const client = await defineClient()
     client.setex(key, 3600, data)
+    client.quit()
     sendResponse(key)
   },
 
   fetchPageContent: async (key) => {
+    const client = await defineClient()
     let data = await client.get(key)
+    client.quit()
     return JSON.parse(data)
   },
 
   fitlerTable: async filters => {
-    defineClient()
+    const client = await defineClient()
     const { selectedCategory, selectedCity } = filters
     let data = await client.get('tableContent')
     let array = await JSON.parse(data)
     let filteredResults = await array.filter(t => t.CityPostalcode === selectedCity && (t.Breadcrumb1 === selectedCategory || t.Breadcrumb2 === selectedCategory ||  t.Breadcrumb3 === selectedCategory))
+    client.quit()
     return filteredResults
   }
 }

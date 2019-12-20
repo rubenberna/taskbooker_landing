@@ -1,7 +1,7 @@
 const asyncRedis = require("async-redis");
 const REDIS_PORT = process.env.PORT || 6379
 
-const client = asyncRedis.createClient();
+const client = asyncRedis.createClient(PORT);
 
 const sendResponse = (key) => {
   console.log(`Set ${key} in redis`);

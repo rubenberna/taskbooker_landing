@@ -13,7 +13,7 @@
     line-height: 65px;
     text-align: center;
     font-weight: 700;
-    color: #3d2c3a;
+    color: var(--thunder);
 }
 
 .bannerThree-containerWrapper-row-entry{
@@ -29,9 +29,9 @@
     flex: 1 1;
     border-radius: 10px;
     padding: 0 15px 21px;
-    border: 1px solid #ead9ce;
-    background-color: #fff;
-    box-shadow: 0 0 22px 0 #efe6e0;
+    border: 1px solid var(--bizarre);
+    background-color: var(--white);
+    box-shadow: 0 0 22px 0 var(--bizarre);
     margin:15px;
 }
 
@@ -57,14 +57,14 @@
     font-size: 24px;
     line-height: 30px;
     text-align: center;
-    color: #3d2c3a;
+    color: var(--thunder);
 }
 
 .bannerThree-containerWrapper-row-advantageItem-description {
     font-size: 18px;
     line-height: 23px;
     text-align: center;
-    color: #3d2c3a;
+    color: var(--thunder);
     font-weight: normal;
 }
 
@@ -76,4 +76,22 @@
     text-decoration-line: underline;
     color: #0a67b3;
     font-weight:normal;
+}
+
+@media screen and (max-width:992px) {
+    .bannerThree-containerWrapper-row-entry{
+        padding-top: 40px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bannerSeven-cta-containerWrapper{
+     width: 100%;
+    }
+}
+@media (min-width: 1200px)
+{
+    .bannerSeven-cta-containerWrapper{
+    max-width: 1170px;
+}
 }

@@ -8,9 +8,9 @@
 }
 
 .banner-two-wrapper {
-  padding-top: 50px;
+  padding: 66px 0 110px;
   position: relative;
-  height: 100vh;
+  
 }
 
 .banner-two-wrapper:before {
@@ -38,7 +38,7 @@
 .banner-two-wrapper-container-tasks {
   display: flex;
   justify-content: space-between;
-  padding-left: 500px;
+  padding-left: 370px;
   position: relative;
   z-index: 9;
 

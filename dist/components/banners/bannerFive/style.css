@@ -9,9 +9,9 @@
 
 
 .banner-five-wrapper {
-  padding-top: 50px;
   position: relative;
-  height: 72vh;
+  padding: 66px 0 73px;
+
 }
 
 .banner-five-wrapper-container-tasks {
@@ -35,4 +35,5 @@ margin-left: auto;
   .banner-five-wrapper-container{
       max-width: 1170px;
   }
+
 }

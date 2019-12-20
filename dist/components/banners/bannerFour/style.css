@@ -1,5 +1,4 @@
 .banner-four {
-  padding: 66px 0 73px;
   background-color: var(--vista-white);
 }
 .banner-four-wrapper-container{
@@ -18,7 +17,8 @@
   margin: 0;
   padding-top: 32px;
 }
-@media (min-width: 1200px){
+
+@media (min-width:var(--large-and-down)) {
   .banner-four-wrapper-container {
     max-width: 1170px;
 }
@@ -30,10 +30,7 @@
   justify-content: space-between;
 }
 
-
-
 .banner-four-wrapper-container-rating-tasker-taskerwrapper {
-  /* display: flex; */
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -51,7 +48,7 @@
 
 .banner-four-wrapper-container-rating-card-cardwrapper {
   padding: 20px;
-  background: #fff;
+  background: var(--white);
   border: 1px solid var(--vista-white);
   border-radius: 10px;
   margin: 7.5px;
@@ -70,7 +67,7 @@
 
 .banner-four-wrapper-container-rating-card-cardheaderborder {
   padding-bottom: 20px;
-  border-bottom: 1px solid #ead9ce;
+  border-bottom: 1px solid var(--bizarre);
 }
 
 .banner-four-wrapper-container-rating-card-cardheaderwrapper {
@@ -192,8 +189,9 @@ margin-right: 10px;
 }
 .banner-four-singlestarrating-ratingcount-text{
   font-size: 14px;
-  color: #7a869a;
+  color: var(--slategray);
   padding-top: 1px;
   margin: 0 3px 0 5px;
   line-height: 17px;
 }
+

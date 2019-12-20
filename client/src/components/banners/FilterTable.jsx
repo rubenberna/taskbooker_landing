@@ -8,8 +8,9 @@ class FilterTable extends React.Component {
     super();
     this.state = {
       tableList: [],
-      selectedCategory: "",
-      selectedCity: "",
+
+      selectedCategory: '',
+      selectedCity: '',
       citiesList: [],
       categoriesList: []
     };

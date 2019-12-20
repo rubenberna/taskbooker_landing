@@ -1,33 +1,31 @@
 
-.bannerSeven-download {
-    padding: 66px 0 73px;
-    background-color: #FFFFF;
-  }
-
-  .bannerSeven-cta {
-    padding: 66px 0 73px;
-    background-color: var(--lightGreen);
-  }
-
-.bannerSeven-download-containerWrapper {
+.bannerSeven-download-containerwrapper {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
+
+a.banner-seven-btn-hier {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1de9b6;
+}
+
 .bannerseven-download-containerWrapper-entry{
     padding: 95px 0;
-
 }
+
 .bannerseven-download-containerWrapper-actionrow{
     display: flex;
     justify-content: space-between;
 }
+
 .bannerseven-download-containerwrapper-button{
     margin: 0;
     max-width: 480px;
     width: 100%;
-    height: 64px;
+    border-radius: 6px;
     font-size: 32px;
     line-height: 40px;
     font-weight: 400;
@@ -35,36 +33,39 @@
     background-color: #0a67b3;
     border: 2px solid transparent;
 }
+
 .bannerseven-download-containerWrapper-description{
     font-size: 30px;
     line-height: 38px;
     color: #3d2c3a;
 }
+
 .bannerseven-download-containerWrapper-title{
     font-size: 50px;
     line-height: 64px;
     color: #3d2c3a;
+    font-weight: 600;
 }
 
-
-@media (min-width: 1200px)
-{
+@media (min-width: 1200px){
   .bannerseven-download-containerwrapper{
     max-width: 1170px;
+ }
 }
 
-}
-@media screen and (max-width:992px)
-{
+@media screen and (max-width:992px){
   .bannerseven-download-containerwrapper{
-width:100%;
+    width:100%;
 }
+
 .bannerseven-download-containerWrapper-actionrow{
 flex-direction: column;
 align-items: center;
 }
+
 .bannerseven-download-containerWrapper-entry{
     padding: 95px 0;
+}
 
 .bannerSeven-cta-containerWrapper-button {
     cursor: pointer !important;
@@ -82,9 +83,4 @@ align-items: center;
     margin: -70px 90px 0 0;
     font-size: 25px;
 
-}
-
-.bannerSeven-cta-containerWrapper-description a{
-    color: var(--turquoise) !important;
-    text-decoration: none !important;
 }

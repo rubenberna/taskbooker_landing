@@ -20,26 +20,38 @@ const sendResponse = (key) => {
 module.exports = {
   setPageContent: async (key, data) => {
     // set in redis the key, expiration (1h) and the value
-    const client = await defineClient()
-    client.setex(key, 3600, data)
-    client.quit()
-    sendResponse(key)
+    try {
+      const client = await defineClient()
+      client.setex(key, 3600, data)
+      client.quit()
+      sendResponse(key)
+    } catch (e) {
+      console.log('error: ', e);
+    }
   },
 
   fetchPageContent: async (key) => {
-    const client = await defineClient()
-    let data = await client.get(key)
-    client.quit()
-    return JSON.parse(data)
+    try {
+      const client = await defineClient()
+      let data = await client.get(key)
+      client.quit()
+      return JSON.parse(data)
+    } catch (e) {
+      console.log('error: ', e);
+    }
   },
 
   fitlerTable: async filters => {
-    const client = await defineClient()
-    const { selectedCategory, selectedCity } = filters
-    let data = await client.get('tableContent')
-    let array = await JSON.parse(data)
-    let filteredResults = await array.filter(t => t.CityPostalcode === selectedCity && (t.Breadcrumb1 === selectedCategory || t.Breadcrumb2 === selectedCategory ||  t.Breadcrumb3 === selectedCategory))
-    client.quit()
-    return filteredResults
+    try {
+      const client = await defineClient()
+      const { selectedCategory, selectedCity } = filters
+      let data = await client.get('tableContent')
+      let array = await JSON.parse(data)
+      let filteredResults = await array.filter(t => t.CityPostalcode === selectedCity && (t.Breadcrumb1 === selectedCategory || t.Breadcrumb2 === selectedCategory ||  t.Breadcrumb3 === selectedCategory))
+      client.quit()
+      return filteredResults
+    } catch (e) {
+      console.log('error: ', e);
+    }
   }
 }

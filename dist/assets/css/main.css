@@ -8,6 +8,8 @@
 @import "../../components/banners/bannerFive/style.css";
 @import "../../components/banners/bannerSix/style.css";
 @import "../../components/banners/bannerSeven/style.css";
+@import "../../components/banners/bannerEight/style.css";
+
 
 body {
   font-family: 'Gilroy', sans-serif;

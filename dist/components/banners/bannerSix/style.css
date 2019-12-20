@@ -68,3 +68,21 @@
     max-width: 1170px;
 }
 }
+
+
+@media screen and (max-width:992px) {
+  .banner-six-wrapper-container{ 
+    width: 100%;
+    }
+    .banner-six-wrapper-container-usersfeedback-innerwrapper {
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 0;
+}
+.banner-six-wrapper-container-usersfeedback:nth-child(2) {
+  margin: 50px 0 0;
+}
+.banner-six-wrapper-container-usersfeedback{
+  margin: 50px 0 0;
+}
+}

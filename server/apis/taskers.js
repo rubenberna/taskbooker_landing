@@ -46,7 +46,6 @@ const getTaskers = async (categoryId, location) => {
     }
   }
   `;
-
   const body = JSON.stringify({ query: q })
   const res = await axios.post(baseURL, body, {
     headers: { "Content-Type": "application/json", "Api-Key": process.env.TASKBOOKER_API_KEY},

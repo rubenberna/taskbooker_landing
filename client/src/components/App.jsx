@@ -1,6 +1,6 @@
 const React = require('react');
 const axios = require('axios');
-const getTaskers = require('../../../server/apis/taskers');
+const taskbookerApi = require('../../../server/apis/taskers');
 const TaskersList = require('./banners/Taskerslist');
 
 class App extends React.Component {
@@ -50,7 +50,7 @@ class App extends React.Component {
   }
 
   async fetchTaskers(filters) {
-    const res = await getTaskers(filters)
+    const res = await taskbookerApi.fetch(filters)
     this.setState({ taskers: res })
   }
 

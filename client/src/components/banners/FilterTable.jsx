@@ -8,7 +8,7 @@ class FilterTable extends React.Component {
     super();
     this.state = {
       tableList: [],
-      selectedCategory: 'klussen',
+      selectedCategory: 'hulp-voor-tablet',
       selectedCity: '',
       citiesList: [],
       categoriesList: []
@@ -18,7 +18,6 @@ class FilterTable extends React.Component {
   async componentDidMount() {
     const res = await axios.post('/queryRedis', {limitResults})
     const data  = res.data
-    console.log(data);
     this.setState({
       tableList: data.shortlist,
       categoriesList: data.uniqueCategories,

@@ -32,11 +32,11 @@ const TaskersList = ({ taskers }) => {
                                 {tasker.prettyName}
                               </h4>
                               <div className="banner-four-singlestarrating-ratingcount">
-                           {tasker.rating ==5 ? <div key={index} className="star-full" /> : tasker.rating >=1 ?<div  className="star-half" /> :  <div  className="star-empty"/> }
+                           {tasker.rating ==5 ? <div key={i} className="star-full" /> : tasker.rating >=1 ?<div  className="star-half" /> :  <div  className="star-empty"/> }
                                <span className="banner-four-singlestarrating-ratingcount-text">{tasker.rating}.0</span>
                                </div>
                               <p className="banner-four-wrapper-container-rating-ratinginforow_ratingvalue">
-                    
+
                               </p>
                               <p className="banner-four-wrapper-container-rating-ratinginforow_ratingvaluedescription">
                                 {tasker.description != null ?  tasker.description.length >90 ? tasker.description.substring(0, 89) : tasker.description :""}

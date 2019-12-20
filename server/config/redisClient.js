@@ -2,7 +2,7 @@ const asyncRedis = require("async-redis");
 var redis = require('redis');
 const REDIS_PORT = process.env.PORT || 6379
 
-const client = defineClient()
+const client = asyncRedis.createClient({port: REDIS_PORT, password: process.env.REDIS_PASSWORD})
 
 function defineClient() {
   if(process.env.NODE_ENV !== 'production') return asyncRedis.createClient({port: REDIS_PORT, password: process.env.REDIS_PASSWORD})
@@ -30,7 +30,6 @@ module.exports = {
     const { selectedCategory, selectedCity } = filters
     let data = await client.get('tableContent')
     let array = await JSON.parse(data)
-    console.log('array: ', selectedCategory, selectedCity);
     let filteredResults = await array.filter(t => t.CityPostalcode === selectedCity && (t.Breadcrumb1 === selectedCategory || t.Breadcrumb2 === selectedCategory ||  t.Breadcrumb3 === selectedCategory))
     return filteredResults
   }

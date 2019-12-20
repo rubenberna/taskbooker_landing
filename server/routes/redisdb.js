@@ -8,8 +8,8 @@ router.post('/', async (req, res) => {
   let shortlist = tablecontent.splice(0, +limitResults)
   let cities = tablecontent.map( t => t.CityPostalcode)
   let categories = tablecontent.map(t => (t.Breadcrumb1, t.Breadcrumb2, t.Breadcrumb3))
-  let uniqueCategories = [...new Set(categories)]
-  let uniqueCities = [...new Set(cities)]
+  let uniqueCategories = [...new Set(categories)].sort()
+  let uniqueCities = [...new Set(cities)].sort()
   let finalObj = {
     shortlist,
     uniqueCities,

@@ -7,6 +7,12 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+.banner-four-wrapper-container {
+  display: flex;
+  justify-content: center;
+}
+
 .banner-four-wrapper-container-title{
   font-size: 52px;
   line-height: 65px;
@@ -194,4 +200,3 @@ margin-right: 10px;
   margin: 0 3px 0 5px;
   line-height: 17px;
 }
-

@@ -2,7 +2,12 @@ const asyncRedis = require("async-redis");
 var redis = require('redis');
 const REDIS_PORT = process.env.PORT || 6379
 
-const client = process.env.NODE_ENV === "development" ? asyncRedis.createClient({port: REDIS_PORT, password: process.env.REDIS_PASSWORD}) : asyncRedis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true});
+const client = defineClient()
+
+function defineClient() {
+  if(process.env.NODE_ENV !== 'production') return asyncRedis.createClient({port: REDIS_PORT, password: process.env.REDIS_PASSWORD})
+  else return asyncRedis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true});
+}
 
 const sendResponse = (key) => {
   console.log(`Set ${key} in redis`);
@@ -21,6 +26,7 @@ module.exports = {
   },
 
   fitlerTable: async filters => {
+    defineClient()
     const { selectedCategory, selectedCity } = filters
     let data = await client.get('tableContent')
     let array = await JSON.parse(data)

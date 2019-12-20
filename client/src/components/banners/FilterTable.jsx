@@ -19,8 +19,6 @@ class FilterTable extends React.Component {
     try {
       const res = await axios.post("/queryRedis", { limitResults });
       this.filterData(res.data);
-      const {categories,citiesPostalcode} = this.state;
-      this.setState({category:categories[0],cityCodePostal : citiesPostalcode[0]});
       this.getData(this.state.category,this.state.cityCodePostal);
     } catch (error) {
       console.log("manar", error);
@@ -28,12 +26,10 @@ class FilterTable extends React.Component {
   }
 
   handleCategory(e) {
-    const { cityCodePostal } = this.state;
-    this.getData(e.target.value, cityCodePostal);
+    this.getData(e.target.value, null);
   }
   handleCity(e) {
-    const { category } = this.state;
-    this.getData(category, e.target.value);
+    this.getData(null, e.target.value);
   }
 
   filterData(arr) {
@@ -58,13 +54,11 @@ class FilterTable extends React.Component {
   }
 
   async getData(category, city) {
-    try {
+   
       const res = await axios.post("/queryRedis/filter", { category, city });
       const data = res.data;
       this.setState({ list: data });
-    } catch (error) {
-      console.log("manar", error);
-    }
+   
   }
 
   render() {

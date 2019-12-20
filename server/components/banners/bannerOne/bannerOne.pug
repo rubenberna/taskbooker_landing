@@ -3,8 +3,8 @@ div#banner-one
     div.banner-one-container-text
       div.banner-one-container-text-info
         h1.banner-one-container-text-header #{HeadlineDynamicContent}
-        div.banner-one-container-text-bullets
-          ul
+        div
+          ul.banner-one-container-text-bullets
             li.bullet
               i(class="fas fa-check-circle") 
               | 
@@ -27,7 +27,7 @@ div#banner-one
       img(src='../../../assets/images/man_tablet.svg' class='banner-one-img up')
   div.banner-one-breadcrumbs
     if Breadcrumb1
-      a(class=(!Breadcrumb2 ? 'banner-one-breadcrumb-dead' : 'banner-one-breadcrumb-live') href='/' + Breadcrumb1) #{Breadcrumb1category} 
+      a(class=(!Breadcrumb2 ? 'banner-one-breadcrumb-live' : 'banner-one-breadcrumb-dead') href='/' + Breadcrumb1) #{Breadcrumb1category} 
     if Breadcrumb2
       div.inner-breadcrumb
         <i class="material-icons bc">chevron_right</i>

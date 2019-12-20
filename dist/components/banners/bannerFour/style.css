@@ -16,6 +16,7 @@
   color:var(--thunder);
   background: var(--vista-white);
   margin: 0;
+  padding-top: 32px;
 }
 @media (min-width: 1200px){
   .banner-four-wrapper-container {
@@ -162,7 +163,7 @@ margin-right: 10px;
 }
 .wrapperStars {
   display: flex;
-  
+
 }
 .star-full {
   width: 17px;
@@ -196,4 +197,3 @@ margin-right: 10px;
   margin: 0 3px 0 5px;
   line-height: 17px;
 }
-

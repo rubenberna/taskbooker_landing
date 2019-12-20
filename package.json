@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wp-server": "node server/server.js",
     "start": "node server/server.js",
     "start-watch": "webpack --watch",
-    "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run wp-server\""
+    "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run start\""
   },
   "keywords": [],
   "author": "",

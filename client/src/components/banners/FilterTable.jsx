@@ -7,9 +7,11 @@ class FilterTable extends React.Component {
   constructor() {
     super();
     this.state = {
-      list: [],
-      category: 'evenementen',
-      city: 'aartselaar-2630'
+      tableList: [],
+      selectedCategory: 'klussen',
+      selectedCity: '',
+      citiesList: [],
+      categoriesList: []
     }
   }
 
@@ -17,7 +19,11 @@ class FilterTable extends React.Component {
     const res = await axios.post('/queryRedis', {limitResults})
     const data  = res.data
     console.log(data);
-    this.setState({ list: data })
+    this.setState({
+      tableList: data.shortlist,
+      categoriesList: data.uniqueCategories,
+      citiesList: data.uniqueCities
+    })
   }
 
   addFilter(name, value) {
@@ -28,14 +34,14 @@ class FilterTable extends React.Component {
   }
 
   async filterResults() {
-    const { category, city } = this.state
-    const res = await axios.post('/queryRedis/filter', {category, city})
+    const { selectedCategory, selectedCity } = this.state
+    const res = await axios.post('/queryRedis/filter', {selectedCategory, selectedCity})
     const data  = res.data
-    this.setState({ list: data })
+    this.setState({ tableList: data })
   }
 
   render() {
-    const { list } = this.state
+    const { tableList } = this.state
     return(
       <div className='container'>
         <button onClick={ this.filterResults.bind(this) }>Filter</button>
@@ -51,7 +57,7 @@ class FilterTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-        {list.map((item, i) =>
+        {tableList.map((item, i) =>
           <tr key={item._id}>
             <td>{i}</td>
             <td>{item.URL}</td>

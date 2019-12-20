@@ -15,7 +15,7 @@
   color:var(--thunder);
   background: var(--vista-white);
   margin: 0;
-  padding: 66px 0 0px;
+  padding-top: 32px;
 }
 
 @media (min-width:var(--large-and-down)) {
@@ -23,16 +23,14 @@
     max-width: 1170px;
 }
 }
+
 .banner-four-wrapper-container-rating{
   display: flex;
   padding-top: 40px;
   justify-content: space-between;
 }
 
-
-
 .banner-four-wrapper-container-rating-tasker-taskerwrapper {
-  /* display: flex; */
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -162,7 +160,7 @@ margin-right: 10px;
 }
 .wrapperStars {
   display: flex;
-  
+
 }
 .star-full {
   width: 17px;
@@ -196,3 +194,4 @@ margin-right: 10px;
   margin: 0 3px 0 5px;
   line-height: 17px;
 }
+

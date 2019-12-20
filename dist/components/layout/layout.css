@@ -1,3 +1,7 @@
+.nav-mobile {
+  height: 100px;
+}
+
 .nav-mobile-containerWrapper {
     max-width: 1170px;
     padding-right: 15px;
@@ -20,7 +24,8 @@
 .nav-mobile-containerWrapper-rowHeader-logoImg {
     vertical-align: middle;
     border: 0;
-    max-width: 129px;
+    width: 129px;
+    height: 38px;
 }
 
 .nav-mobile-containerWrapper-rowNav-logo-burgerIcon {
@@ -158,14 +163,12 @@ a {
     background-size: cover;
 }
 
-
-
-
 @media (min-width: 1200px) {
     .footer-container-wrappercontainer {
         max-width: 1170px;
     }
 }
+
 @media screen and (max-width:992px) {
     .footer-container-wrappercontainer-wrapperFooter{
         padding: 35px 0;
@@ -175,5 +178,5 @@ a {
     .footer-container-wrappercontainer-navigationWrapper{
         padding: 50px 0px;
     }
-  
+
 }

@@ -1,6 +1,7 @@
-let React = require('react');
-let getTaskers = require('../../../server/apis/taskers');
-let TaskersList = require('./Taskerslist');
+const React = require('react');
+const axios = require('axios');
+const taskbookerApi = require('../../../server/apis/taskers');
+const TaskersList = require('./banners/Taskerslist');
 
 class App extends React.Component {
   constructor() {
@@ -34,31 +35,27 @@ class App extends React.Component {
       maximumAge: 0
     };
     return new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(resolve, reject, options);
+      navigator.geolocation.getCurrentPosition(resolve, reject, options);
     });
   }
 
   async fetchCoordinates(){
     try {
-        const { coords } = await this.getCurrentPosition();
-        const { latitude, longitude } = coords;
-        return { latitude, longitude }
+      const { coords } = await this.getCurrentPosition();
+      const { latitude, longitude } = coords;
+      return { latitude, longitude }
     } catch (error) {
-        return error
+      return error
     }
   }
 
   async fetchTaskers(filters) {
-    const res = await getTaskers(filters)
+    const res = await taskbookerApi.fetch(filters)
     this.setState({ taskers: res })
   }
 
   render() {
-    return (
-      <div>
-        <TaskersList taskers={this.state.taskers}/>
-      </div>
-    );
+    return  <TaskersList taskers={this.state.taskers}/>
   }
 }
 module.exports = App;

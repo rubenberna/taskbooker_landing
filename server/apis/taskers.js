@@ -1,16 +1,40 @@
-const getTaskers = async obj => {
-  console.log("tasker: ", obj);
+const fetch = require('node-fetch');
+const axios = require('axios');
+
+const baseURL = "https://api.stg.taskbooker.be/graphql"
+
+const getCategoryID = async url => {
   const q = `
   {
-    listActiveUsers(filter:{categoryIds:["b591a956-10aa-4bfb-bad4-92ddfb8b81a6"]}) {
+    getCategory(url: "${url}") {
+      id
+    }
+  }
+  `
+  const body = JSON.stringify({ query: q })
+  const res = await axios.post(baseURL, body, {
+    headers: { "Content-Type": "application/json", "Api-Key": process.env.TASKBOOKER_API_KEY},
+  })
+  const { data } = res.data
+  return data.getCategory.id
+}
+
+const getTaskers = async (categoryId, location) => {
+  let locationQuery = typeof location === 'object' ? `location: {lat: ${location.latitude}, lon: ${location.longitude}}` : `city: "${location.split('-')[0]}"`
+
+  const q = `
+  {
+    listActiveUsers(filter:{categoryIds:["${categoryId}"], ${locationQuery}, roles:["tasker", "protasker"], radius: 20}, size: 6) {
       records {
         nodes {
           id,
           avatar {
             url
           },
-             prettyName,
+          prettyName,
+          price,
           rating,
+          price,
           description,
           categories {
               nodes {
@@ -21,11 +45,19 @@ const getTaskers = async obj => {
       }
     }
   }
-  `
-
-  return fetch('https://api.stg.taskbooker.be/public/graphql', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ query: q })})
-  .then((response) => response.json())
-  .then((t) => t.data.listActiveUsers.records.nodes)
+  `;
+  const body = JSON.stringify({ query: q })
+  const res = await axios.post(baseURL, body, {
+    headers: { "Content-Type": "application/json", "Api-Key": process.env.TASKBOOKER_API_KEY},
+  })
+  const { data } = res.data
+  return data.listActiveUsers.records.nodes
 }
 
-module.exports = getTaskers
+module.exports = {
+  fetch: async ({categoryToBeSearched, location}) => {
+    let categoryId = await getCategoryID(categoryToBeSearched)
+    let taskers = await getTaskers(categoryId, location)
+    return taskers
+  }
+}

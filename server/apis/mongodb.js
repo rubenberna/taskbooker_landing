@@ -6,7 +6,7 @@ const url = process.env.MONGODB_URL
 const dbName = process.env.MONGODB_DB_NAME
 const colName = process.env.MONGODB_COLLECTION
 
-const loadContent = async (key) => {
+const loadPageContent = async (key) => {
   try {
     const client = await mongodb.MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
     const collection = client.db(dbName).collection(colName)
@@ -17,10 +17,23 @@ const loadContent = async (key) => {
   }
 }
 
+const getTableContent = async () => {
+  try {
+    const client = await mongodb.MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
+    const collection = client.db(dbName).collection(colName)
+    const data = await collection.find({}).project({URL: 1, Breadcrumb1: 1, Breadcrumb2: 1, Breadcrumb3: 1, CityPostalcode: 1}).toArray()
+    return data
+  } catch (e) {
+    console.log(e);
+  }
+}
 
-module.exports = loadContent
+module.exports = {
+  loadPageContent,
+  getTableContent
+}
 
-// module.exports = (key) => { 
+// module.exports = (key) => {
 //   let k = key.replace(/\//g, "_").replace(/\./g, "_");
 //   return Promise.resolve([testdata["content"][k]]);
 // }

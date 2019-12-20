@@ -4,25 +4,10 @@ block content
     include ../components/banners/bannerOne/bannerOne
     include ../components/banners/bannerTwo/bannerTwo
     include ../components/banners/bannerThree/bannerThree
+    h2.banner-four-wrapper-container-title= HeadlineDynamicContent
+    div#app
     include ../components/banners/bannerFive/bannerFive
     include ../components/banners/bannerSix/bannerSix
-    div#app
-    div.container
-      div.title The Advantages
-      div.subtitle Of working with taskbooker
-      img(src="http://img.jpg")
-    div.spacer
-    div.container 
-      div.title Download the app
-      div.subtitle Take Taskbooker with you everywhere
-      div.logos
-        img.logo(src="/assets/images/googleplay.png")
-        img.logo(src="/assets/images/appstore.svg")
-    div.spacer
-    div.containerrow
-      div.taskaction
-        | Get your tasks done now
-        span Or do you want to earn extra money. Click here
-      div.spacer
-      button(class="btn btn-primary large")= CTAtext
+    include ../components/banners/bannerSeven/bannerSeven
+    div#root
     include ../components/layout/footer

@@ -1,0 +1,197 @@
+.banner-four {
+  background-color: var(--vista-white);
+}
+.banner-four-wrapper-container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.banner-four-wrapper-container-title{
+  font-size: 52px;
+  line-height: 65px;
+  text-align: center;
+  font-weight: 700;
+  color:var(--thunder);
+  background: var(--vista-white);
+  margin: 0;
+  padding-top: 32px;
+}
+
+@media (min-width:var(--large-and-down)) {
+  .banner-four-wrapper-container {
+    max-width: 1170px;
+}
+}
+
+.banner-four-wrapper-container-rating{
+  display: flex;
+  padding-top: 40px;
+  justify-content: space-between;
+}
+
+.banner-four-wrapper-container-rating-tasker-taskerwrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 570px 570px;
+}
+
+.banner-four-wrapper-container-rating-tasker-columnlast{
+  display: table;
+  table-layout: fixed;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.banner-four-wrapper-container-rating-card-cardwrapper {
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--vista-white);
+  border-radius: 10px;
+  margin: 7.5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.banner-four-wrapper-container-rating-card-cardcontainer {
+  display: flex;
+}
+
+.banner-four-wrapper-container-rating-card-cardcontent {
+  width: 100%;
+}
+
+.banner-four-wrapper-container-rating-card-cardheaderborder {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--bizarre);
+}
+
+.banner-four-wrapper-container-rating-card-cardheaderwrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.banner-four-wrapper-container-rating-card-headertext {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color:var(--thunder);
+  margin: 0;
+
+}
+
+
+.banner-four-wrapper-container-rating-taskerprogresscard {
+  max-height: calc(100vh - 601px);
+  overflow-y: auto;
+}
+
+
+
+ .RatingInfoRow_ratingText__29YhU {
+  font-size: 14px;
+  line-height: 14px;
+  margin-right: 5px;
+}
+
+.banner-four-wrapper-container-rating-starrating_wrapperstars {
+  display: flex;
+}
+
+
+
+ .banner-four-wrapper-container-rating-cardratinginforow_description {
+  align-items: center;
+  padding-top: 3px;
+  text-align: left;
+  width: 100%;
+}
+.banner-four-wrapper-container-rating-cardratinginforow_description-price{
+  display: flex;
+  justify-content: flex-end;
+    padding-top: 3px;
+}
+.banner-four-wrapper-container-rating-ratinginforow_ratingvaluedescription,
+ .banner-four-wrapper-container-rating-ratinginforow_ratingvalue {
+  line-height: 21px;
+  margin: 0px;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color:var(--thunder);
+  padding-left: 10px;
+}
+
+
+
+.banner-four-wrapper-container-rating-tasker_mytaskerwrapper .Tasker_badgesList__1FmZX {
+  flex-wrap: wrap;
+  margin-top: 50px;
+  overflow-y: auto;
+}
+.banner-four-wrapper-container-rating-card-cardheaderwrapper-image-cover {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+padding: 0;
+object-fit: cover;
+object-position: center right;
+}
+.banner-four-wrapper-container-rating-card-cardheaderwrapper-img{
+margin-right: 10px;
+}
+.banner-four-wrapper-container-rating-imagewrapper{
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("/assets/images/coin.svg");
+}
+.wrapperStars {
+  display: flex;
+
+}
+.star-full {
+  width: 17px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("/assets/images/StarFull.svg");
+}
+.star-half {
+  width: 17px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("/assets/images/StarHalf.svg");
+}
+.star-empty {
+  width: 17px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("/assets/images/StarEmpty.svg");
+}
+.banner-four-singlestarrating-ratingcount{
+  display: flex;
+  padding: 10px;
+}
+.banner-four-singlestarrating-ratingcount-text{
+  font-size: 14px;
+  color: var(--slategray);
+  padding-top: 1px;
+  margin: 0 3px 0 5px;
+  line-height: 17px;
+}
+

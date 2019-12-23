@@ -69,8 +69,8 @@ select:focus{
 .seo-pages-cities-item a{
   text-decoration: none;
   color: var(--black);
-
 }
+
 .seo-pages-cities-select{
   max-width: 1400px;
   margin-left: auto;
@@ -88,5 +88,9 @@ select:focus{
 }
 
 option {
+  text-transform: capitalize;
+}
+
+.filter-table-city {
   text-transform: capitalize;
 }

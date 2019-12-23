@@ -41,7 +41,6 @@ class FilterTable extends React.Component {
       selectedProvince
     });
     const data = res.data;
-    console.log(data);
     this.setState({ tableList: data });
   }
 
@@ -87,6 +86,7 @@ class FilterTable extends React.Component {
                   .charAt(0)
                   .toUpperCase() +
                   item.Breadcrumb1.replace(/-/g, " ").slice(1)}{" "}
+                <span className='filter-table-city'>{item.CityPostalcode}</span>
               </a>
             </li>
           ))}

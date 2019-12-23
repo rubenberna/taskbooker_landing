@@ -5,7 +5,7 @@ const redisClient = require('../config/redisClient');
 router.post('/', async (req, res) => {
   let { limitResults } = req.body
   let tablecontent = await redisClient.fetchPageContent('tableContent')
-  let shortlist = tablecontent.splice(0, +limitResults)
+  let shortlist = tablecontent.splice(0, +limitResults).sort()
   let provinces = tablecontent.map( t => t.Province)
   let categories = tablecontent.map(t => t.Breadcrumb1)
   let uniqueCategories = [...new Set(categories)].sort()

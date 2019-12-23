@@ -9,8 +9,8 @@ class FilterTable extends React.Component {
     this.state = {
       tableList: [],
       selectedCategory: '',
-      selectedCity: '',
-      citiesList: [],
+      selectedProvince: '',
+      provinceList: [],
       categoriesList: []
     };
   }
@@ -21,7 +21,7 @@ class FilterTable extends React.Component {
     this.setState({
       tableList: data.shortlist,
       categoriesList: data.uniqueCategories,
-      citiesList: data.uniqueCities
+      provinceList: data.uniqueProvinces
     });
   }
 
@@ -29,23 +29,24 @@ class FilterTable extends React.Component {
     await this.setState({ selectedCategory: e.target.value });
     this.filterResults();
   }
-  async handleCity(e) {
-    await this.setState({ selectedCity: e.target.value });
+  async handleProvince(e) {
+    await this.setState({ selectedProvince: e.target.value });
     this.filterResults();
   }
 
   async filterResults() {
-    const { selectedCategory, selectedCity } = this.state;
+    const { selectedCategory, selectedProvince } = this.state;
     const res = await axios.post("/queryRedis/filter", {
       selectedCategory,
-      selectedCity
+      selectedProvince
     });
     const data = res.data;
+    console.log(data);
     this.setState({ tableList: data });
   }
 
   render() {
-    const { tableList, citiesList, categoriesList } = this.state;
+    const { tableList, provinceList, categoriesList } = this.state;
     return (
       <div className="container">
         <div className="seo-pages-cities-select">
@@ -56,8 +57,9 @@ class FilterTable extends React.Component {
                 onChange={this.handleCategory.bind(this)}
                 className="select"
               >
-                {categoriesList.map(category => (
-                  <option key={category} value={category}>
+                <option></option>
+                {categoriesList.map((category, i) => (
+                  <option key={`${category}${i}`} value={category}>
                     {category}
                   </option>
                 ))}
@@ -66,11 +68,11 @@ class FilterTable extends React.Component {
           </label>
           <label>
             <span className='select-title'>Province</span>
-            <select onChange={this.handleCity.bind(this)} className="select">
+            <select onChange={this.handleProvince.bind(this)} className="select">
               <option></option>
-              {citiesList.map(cityCodePostal => (
-                <option key={cityCodePostal} value={cityCodePostal}>
-                  {cityCodePostal}
+              {provinceList.map((province, i) => (
+                <option key={`${province}${i}`} value={province}>
+                  {province}
                 </option>
               ))}
             </select>
@@ -85,15 +87,12 @@ class FilterTable extends React.Component {
                   .charAt(0)
                   .toUpperCase() +
                   item.Breadcrumb1.replace(/-/g, " ").slice(1)}{" "}
-                {item.Breadcrumb2.replace(/-/g, " ")}
-                {item.Breadcrumb3.replace(/-/g, " ")}{" "}
-                {item.CityPostalcode.replace(/-/g, " ")}
               </a>
             </li>
           ))}
         </ul>
       </div>
-    );
+    )
   }
 }
 

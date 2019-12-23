@@ -44,10 +44,11 @@ module.exports = {
   fitlerTable: async filters => {
     try {
       const client = await defineClient()
-      const { selectedCategory, selectedCity } = filters
+      const { selectedCategory, selectedProvince } = filters;
+      console.log(filters);
       let data = await client.get('tableContent')
       let array = await JSON.parse(data)
-      let filteredResults = await array.filter(t => t.CityPostalcode === selectedCity && (t.Breadcrumb1 === selectedCategory || t.Breadcrumb2 === selectedCategory ||  t.Breadcrumb3 === selectedCategory))
+      let filteredResults = await array.filter(t => t.Province === selectedProvince && t.Breadcrumb1 === selectedCategory)
       client.quit()
       return filteredResults
     } catch (e) {

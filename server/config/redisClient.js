@@ -30,18 +30,6 @@ module.exports = {
     }
   },
 
-  setUrlIds: async data => {
-    try {
-      const client = await defineClient()
-      client.setex('urls', 3600, data)
-      client.quit()
-      sendResponse('urls')
-      return
-    } catch (e) {
-      console.log('error: ', e);
-    }
-  },
-
   fetchPageContent: async (key) => {
     try {
       const client = await defineClient()
@@ -62,19 +50,6 @@ module.exports = {
       let filteredResults = await array.filter(t => t.Province === selectedProvince && t.Breadcrumb1 === selectedCategory)
       client.quit()
       return filteredResults
-    } catch (e) {
-      console.log('error: ', e);
-    }
-  },
-
-  searchId: async url => {
-    try {
-      const client = await defineClient()
-      let data = await client.get('urls')
-      let array = await JSON.parse(data)
-      let id = array.find(obj => obj.URL === url)
-      client.quit()
-      return id
     } catch (e) {
       console.log('error: ', e);
     }

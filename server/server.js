@@ -23,15 +23,11 @@ async function getContent(req, res, next) {
   } else {
     console.log('get content');
     let key = `www.taskbooker.be${req.params[0]}`
-    // let content = await mongodb.loadPageContent(key)
-    let urlIds = await mongodb.getIds()
-    await redisClient.setUrlIds(JSON.stringify(urlIds))
-    let searchableId = await redisClient.searchId(key)
-    let speedContent = await mongodb.getByID(searchableId._id)
-    if (speedContent){
-      res.render('index', { ...speedContent[0] });
-      redisClient.setPageContent(key, JSON.stringify(speedContent[0]))
-      let tableContent = await mongodb.getTableContent()
+    let content = await mongodb.loadPageContent(key)
+    if (content){
+      res.render('index', { ...content[0] });
+      redisClient.setPageContent(key, JSON.stringify(content[0]))
+      let tableContent = await mongodb.getFilterTableContent()
       redisClient.setPageContent('tableContent', JSON.stringify(tableContent))
     }
     else res.send('invalid params');

@@ -30,6 +30,17 @@ module.exports = {
     }
   },
 
+  setUrlIds: async data => {
+    try {
+      const client = await defineClient()
+      client.setex('urls', 3600, data)
+      client.quit()
+      sendResponse(key)
+    } catch (e) {
+      console.log('error: ', e);
+    }
+  },
+
   fetchPageContent: async (key) => {
     try {
       const client = await defineClient()
@@ -45,7 +56,6 @@ module.exports = {
     try {
       const client = await defineClient()
       const { selectedCategory, selectedProvince } = filters;
-      console.log(filters);
       let data = await client.get('tableContent')
       let array = await JSON.parse(data)
       let filteredResults = await array.filter(t => t.Province === selectedProvince && t.Breadcrumb1 === selectedCategory)
@@ -53,6 +63,16 @@ module.exports = {
       return filteredResults
     } catch (e) {
       console.log('error: ', e);
+    }
+  },
+
+  searchId: async url => {
+    try {
+      const client = await defineClient()
+      let data = await client.hgetall(key)
+
+    } catch (e) {
+
     }
   }
 }

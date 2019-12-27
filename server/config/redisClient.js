@@ -35,7 +35,8 @@ module.exports = {
       const client = await defineClient()
       client.setex('urls', 3600, data)
       client.quit()
-      sendResponse(key)
+      sendResponse('urls')
+      return
     } catch (e) {
       console.log('error: ', e);
     }
@@ -69,10 +70,13 @@ module.exports = {
   searchId: async url => {
     try {
       const client = await defineClient()
-      let data = await client.hgetall(key)
-
+      let data = await client.get('urls')
+      let array = await JSON.parse(data)
+      let id = array.find(obj => obj.URL === url)
+      client.quit()
+      return id
     } catch (e) {
-
+      console.log('error: ', e);
     }
   }
 }

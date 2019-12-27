@@ -1,6 +1,7 @@
 const mongodb = require('mongodb');
 const MongoClient = require('mongodb').MongoClient;
 const testdata = require('../data.js');
+const { ObjectId } = require('bson'); 
 
 const url = process.env.MONGODB_URL
 const dbName = process.env.MONGODB_DB_NAME
@@ -42,8 +43,24 @@ const getIds = async () => {
   }
 }
 
+const getByID = async id => {
+  console.log('id: ', id);
+  const objectId = new ObjectId(id)
+  try {
+    const client = await mongodb.MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
+    const collection = client.db(dbName).collection(colName)
+    const data = await collection.find({"_id": objectId }).toArray()
+    console.log('data: ', data);
+    client.close()
+    return data
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 module.exports = {
   loadPageContent,
   getTableContent,
-  getIds
+  getIds,
+  getByID
 }

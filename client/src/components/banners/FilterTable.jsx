@@ -3,6 +3,7 @@ const axios = require("axios");
 
 const limitResults = 200;
 
+
 class FilterTable extends React.Component {
   constructor() {
     super();
@@ -46,6 +47,7 @@ class FilterTable extends React.Component {
 
   render() {
     const { tableList, provinceList, categoriesList } = this.state;
+    const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3131/' : "www.taskbooker.be/info"
     return (
       <div className="container">
         <div className="seo-pages-cities-select">
@@ -81,7 +83,7 @@ class FilterTable extends React.Component {
         <ul className="seo-pages-cities-list">
           {tableList.map((item, i) => (
             <li key={item._id} className="seo-pages-cities-item">
-              <a href={item.URL.replace("www.taskbooker.be/", "")}>
+              <a href={baseURL + item.URL.replace("www.taskbooker.be/", "")}>
                 {item.Breadcrumb1.replace(/-/g, " ")
                   .charAt(0)
                   .toUpperCase() +

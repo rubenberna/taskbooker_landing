@@ -48,7 +48,7 @@ const TaskersList = ({ taskers }) => {
                               <div
                                 className="banner-four-wrapper-container-rating-ratinginforow_ratinginfo"
                                 role="button"
-                                tabindex="0"
+                                tabIndex="0"
                               >
                                 <div className="banner-four-wrapper-container-rating-starrating_wrapperstars">
                                   <div className="banner-four-wrapper-container-rating-starrating-starempty" />

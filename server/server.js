@@ -29,8 +29,8 @@ async function getContent(req, res, next) {
       redisClient.setPageContent(key, JSON.stringify(content[0]))
       let tableContent = await mongodb.getFilterTableContent()
       redisClient.setPageContent('tableContent', JSON.stringify(tableContent))
-    }
-    else res.redirect('https://www.taskbooker.be/')
+    } else res.send('fuck')
+    // else res.redirect('https://www.taskbooker.be/')
   }
 }
 
@@ -42,7 +42,8 @@ async function cache(req, res, next) {
     let pageContent = await redisClient.fetchPageContent(key)
     if(pageContent !== null) res.render('index', {...pageContent})
     else next()
-  } else res.redirect('https://www.taskbooker.be/')
+  } else res.send('fuck')
+  // else res.redirect('https://www.taskbooker.be/')
 }
 
 app.get('*', cache, getContent)

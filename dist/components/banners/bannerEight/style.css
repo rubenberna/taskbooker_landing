@@ -1,4 +1,4 @@
-select{
+select {
   height: 50px;
   border-radius: 6px !important;
   line-height: 51px;
@@ -20,7 +20,8 @@ select{
   width: 330px;
 
 }
-select:focus{
+
+select:focus {
   height: 50px;
   border-radius: 6px;
   line-height: 51px;
@@ -46,12 +47,13 @@ select:focus{
   width: 100px;
 }
 
-.container-select{
+.container-select {
   display: flex;
   padding: 40px;
   justify-content: space-between;
 }
-.seo-pages-cities-list{
+
+.seo-pages-cities-list {
   -webkit-columns: 3;
   -moz-columns: 3;
   columns: 3;
@@ -62,18 +64,20 @@ select:focus{
   text-align: left;
 
 }
-.seo-pages-cities-item{
+
+.seo-pages-cities-item {
 
   border-left: 3px solid #f5eef3;
   padding: 0 3em 0 .75em;
 
 }
-.seo-pages-cities-item a{
+
+.seo-pages-cities-item a {
   text-decoration: none;
   color: var(--black);
 }
 
-.seo-pages-cities-select{
+.seo-pages-cities-select {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -85,7 +89,7 @@ select:focus{
   padding: 95px 0;
 }
 
-.seo-pages-cities-select span{
+.seo-pages-cities-select span {
   padding: 10px;
 }
 
@@ -94,21 +98,25 @@ option {
 }
 
 
-@media screen and (max-width:992px){
-  .seo-pages-cities-select{
+@media screen and (max-width:992px) {
+  .seo-pages-cities-select {
     flex-direction: column;
-    align-items: center;      }
-    .seo-pages-cities-list{
-      -webkit-columns: 2;
-      -moz-columns: 2;
-      columns: 2;
-  height: 888px;
-    
-    }
-    .container {
-      max-width: 100%;
-    }
-    .seo-pages-cities-item{
-      font-size: 38px;
-    }
+    align-items: center;
   }
+
+  .seo-pages-cities-list {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    height: 888px;
+
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .seo-pages-cities-item {
+    font-size: 38px;
+  }
+}

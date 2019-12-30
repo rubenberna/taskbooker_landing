@@ -1,23 +1,23 @@
 .bannerSeven-download-containerwrapper {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 a.banner-seven-btn-hier {
-  text-decoration: none;
-  font-weight: 600;
-  color: #1de9b6;
+    text-decoration: none;
+    font-weight: 600;
+    color: #1de9b6;
 }
 
 .bannerseven-download-containerWrapper-entry {
-  padding: 95px 0;
+    padding: 95px 0;
 }
 
 .bannerseven-download-containerWrapper-actionrow {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -41,72 +41,72 @@ a.bannerseven-download-containerwrapper-button {
     max-height: 170px;
     align-self: baseline;
     text-align: center;
-  }
-  
-  a.bannerseven-download-containerwrapper-button:hover {
+}
+
+a.bannerseven-download-containerwrapper-button:hover {
     background-color: var(--white);
     border-color: var(--denim);
     color: var(--denim);
-  }
+}
 
 .bannerseven-download-containerWrapper-description {
-  font-size: 30px;
-  line-height: 38px;
-  color: #3d2c3a;
-  margin-bottom: 26px;
-  text-align: center;
+    font-size: 30px;
+    line-height: 38px;
+    color: #3d2c3a;
+    margin-bottom: 26px;
+    text-align: center;
 }
 
 .bannerseven-download-containerWrapper-title {
-  font-size: 53px;
-  line-height: 2.2;
-  color: #3d2c3a;
-  text-align: center;
-  font-size: 52px;
+    font-size: 53px;
+    line-height: 2.2;
+    color: #3d2c3a;
+    text-align: center;
+    font-size: 52px;
 }
 
 @media (min-width: 1200px) {
-  .bannerseven-download-containerwrapper {
-    max-width: 1170px;
-  }
+    .bannerseven-download-containerwrapper {
+        max-width: 1170px;
+    }
 }
 
 @media screen and (max-width: 992px) {
-  .bannerseven-download-containerWrapper-description {
-    font-size: 38px;
-    line-height: 1.2;
-    color: #3d2c3a;
-  }
+    .bannerseven-download-containerWrapper-description {
+        font-size: 38px;
+        line-height: 1.2;
+        color: #3d2c3a;
+    }
 
-  .bannerseven-download-containerWrapper-row {
-    padding: 50px 0;
-  }
+    .bannerseven-download-containerWrapper-row {
+        padding: 50px 0;
+    }
 
-  .bannerseven-download-containerwrapper {
-    width: 100%;
-  }
+    .bannerseven-download-containerwrapper {
+        width: 100%;
+    }
 
-  .bannerseven-download-containerWrapper-actionrow {
-    flex-direction: column;
-    align-items: center;
-  }
+    .bannerseven-download-containerWrapper-actionrow {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .bannerseven-download-containerWrapper-entry {
-    padding: 95px 0;
-  }
+    .bannerseven-download-containerWrapper-entry {
+        padding: 95px 0;
+    }
 
-  .bannerSeven-cta-containerWrapper-button {
-    margin: 0;
-    max-width: 480px;
-    width: 100%;
-    border-radius: 6px;
-    font-size: 32px;
-    line-height: 40px;
-    font-weight: 400;
-    color: #fff;
-    color: #0a67b3;
-    border: 2px solid transparent;
-    padding: 13px 20px 8px;
-    text-decoration: none;
-  }
+    .bannerSeven-cta-containerWrapper-button {
+        margin: 0;
+        max-width: 480px;
+        width: 100%;
+        border-radius: 6px;
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 400;
+        color: #fff;
+        color: #0a67b3;
+        border: 2px solid transparent;
+        padding: 13px 20px 8px;
+        text-decoration: none;
+    }
 }

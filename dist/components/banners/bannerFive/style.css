@@ -4,7 +4,7 @@
   line-height: 65px;
   text-align: center;
   font-weight: 700;
-  color:var(--thunder);
+  color: var(--thunder);
 }
 
 
@@ -26,20 +26,24 @@
   margin: 28px 20px;
   font-size: 20px;
 }
-.banner-five-wrapper-container{
-padding-right: 15px;
-padding-left: 15px;
-margin-right: auto;
-margin-left: auto;
+
+.banner-five-wrapper-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 @media (min-width: 1200px) {
-  .banner-five-wrapper-container{
-      max-width: 1170px;
+  .banner-five-wrapper-container {
+    max-width: 1170px;
   }
 
 }
+
 @media screen and (max-width: 992px) {
-  .paragraph {    font-size: 38px;
+  .paragraph {
+    font-size: 38px;
     line-height: 1.2;
   }
 }

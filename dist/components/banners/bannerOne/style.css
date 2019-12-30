@@ -3,6 +3,7 @@
   position: relative;
   padding: 66px 0 200px;
 }
+
 .banner-one-bottom,
 .banner-one-container {
   padding-right: 15px;
@@ -10,6 +11,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 .banner-one-container-info {
   display: flex;
   justify-content: space-evenly;
@@ -49,24 +51,15 @@ i.fa-check-circle {
   height: 500px;
   max-width: 30%;
 }
+
 img.banner-one-img.down {
   width: 100%;
 }
-/* img.banner-one-img {
-  width: 300px;
-} */
-
-/* 
-
-img.banner-one-img.up {
-  align-self: flex-start;
-} */
-
-
 
 .banner-one-breadcrumbs {
   display: flex;
 }
+
 .banner-one-bottom {
   display: flex;
   position: absolute;
@@ -74,6 +67,7 @@ img.banner-one-img.up {
   justify-content: space-between;
   width: 100%;
 }
+
 a.banner-one-breadcrumb-live {
   margin-right: 15px;
   font-size: 18px;
@@ -98,6 +92,7 @@ a.banner-one-breadcrumb-dead {
 i.bc {
   margin-right: 15px;
 }
+
 a.large-btn {
   text-decoration: none;
   font-size: 34px !important;
@@ -124,6 +119,7 @@ a.large-btn:hover {
   border-color: var(--denim);
   color: var(--denim);
 }
+
 a.sticky-btn {
   text-decoration: none;
   position: -webkit-sticky;
@@ -140,7 +136,6 @@ a.sticky-btn {
   cursor: pointer;
   transition: all .2s ease-in-out;
   min-width: 205px;
-  /* margin: -100px 90px 0 0; */
   font-size: 19px;
 }
 
@@ -151,6 +146,7 @@ a.sticky-btn:hover {
 }
 
 @media (min-width: 1200px) {
+
   .banner-one-bottom,
   .banner-one-container {
     max-width: 1170px;
@@ -158,48 +154,60 @@ a.sticky-btn:hover {
 }
 
 @media screen and (max-width: 992px) {
+
   .banner-one-bottom,
   .banner-one-container {
     width: 100%;
   }
+
   .banner-one-container-info {
     flex-direction: column-reverse;
   }
+
   .banner-one-container-text {
     max-width: 100%;
   }
+
   .banner-one-container-img {
     max-width: 100%;
   }
- 
+
   .banner-one-button {
     display: none;
   }
+
   li.bullet {
     font-size: 38px;
   }
+
   a.banner-one-breadcrumb-dead {
     font-size: 38px;
   }
-  button.large-btn{
+
+  button.large-btn {
     margin: auto;
   }
-  a.bannerseven-download-containerwrapper-button{
+
+  a.bannerseven-download-containerwrapper-button {
     max-width: 100% !important;
     margin: 20px !important;
   }
-  a.large-btn{
+
+  a.large-btn {
     max-width: 100% !important;
 
   }
-  .nav-mobile-containerWrapper-rowNav-menuListItem{
+
+  .nav-mobile-containerWrapper-rowNav-menuListItem {
     font-size: 38px;
   }
+
   .seo-pages-cities-select .select-title {
     font-size: 38px;
     width: 126px;
   }
-  select{
+
+  select {
     font-size: 10px;
   }
 

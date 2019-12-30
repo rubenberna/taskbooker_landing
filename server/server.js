@@ -24,22 +24,25 @@ async function getContent(req, res, next) {
     console.log('get content');
     let key = `www.taskbooker.be${req.params[0]}`
     let content = await mongodb.loadPageContent(key)
-    if (content){
+    if (content.length){
       res.render('index', { ...content[0] });
       redisClient.setPageContent(key, JSON.stringify(content[0]))
       let tableContent = await mongodb.getFilterTableContent()
       redisClient.setPageContent('tableContent', JSON.stringify(tableContent))
     }
-    else res.send('invalid params');
+    else res.redirect('https://www.taskbooker.be/')
   }
 }
 
 async function cache(req, res, next) {
   console.log('cache');
-  let key = `www.taskbooker.be${req.params[0]}`
-  let pageContent = await redisClient.fetchPageContent(key)
-  if(pageContent !== null) res.render('index', {...pageContent})
-  else next()
+  const params = req.params[0]
+  if (params.length > 1 ) {
+    let key = `www.taskbooker.be${req.params[0]}`
+    let pageContent = await redisClient.fetchPageContent(key)
+    if(pageContent !== null) res.render('index', {...pageContent})
+    else next()
+  } else res.redirect('https://www.taskbooker.be/')
 }
 
 app.get('*', cache, getContent)

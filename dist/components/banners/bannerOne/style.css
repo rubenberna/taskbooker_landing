@@ -71,7 +71,8 @@ button.large-btn {
   font-weight: 400;
   font-size: 39px;
   line-height: 47px;
-  max-width: 570px;
+  max-width: 630px;
+  max-height: 124px;
   align-self: baseline;
 }
 

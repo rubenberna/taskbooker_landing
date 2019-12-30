@@ -1,16 +1,22 @@
-.banner-two-wrapper-container-title{
+.banner-two-wrapper-container-title {
   margin-bottom: 92px;
   font-size: 52px;
   line-height: 65px;
   text-align: center;
   font-weight: 700;
-  color:var(--thunder);
+  color: var(--thunder);
+}
+
+.banner-two-wrapper-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .banner-two-wrapper {
   padding: 66px 0 110px;
   position: relative;
-  
 }
 
 .banner-two-wrapper:before {
@@ -24,11 +30,12 @@
   width: 393px;
   z-index: 2;
 }
+
 .banner-two-wrapper:after {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color:var(--vista-white);
+  background-color: var(--vista-white);
   content: "";
   height: 311px;
   width: 100%;
@@ -38,11 +45,90 @@
 .banner-two-wrapper-container-tasks {
   display: flex;
   justify-content: space-between;
-  padding-left: 370px;
+  padding-left: 412px;
   position: relative;
   z-index: 9;
-
 }
-.banner-two-wrapper-container-tasks img{
+
+.banner-two-wrapper-container-tasks img {
   width: 60vw;
+}
+
+.banner-two-wrapper-container-how-it-works {
+  display: none;
+}
+
+.banner-two-wrapper-container-how-it-works {
+  height: auto;
+  padding-bottom: 35px;
+}
+
+.banner-two-wrapper-container-how-it-works-first-task,
+.banner-two-wrapper-container-how-it-works-second-task,
+.banner-two-wrapper-container-how-it-works-third-task {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.banner-two-wrapper-container-how-it-works-first-task img,
+.banner-two-wrapper-container-how-it-works-second-task img,
+.banner-two-wrapper-container-how-it-works-third-task img {
+  width: 50%;
+}
+
+.banner-two-wrapper-container-how-it-works-nametask {
+  margin-left: 20px;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #3d2c3a;
+  text-align: center;
+  font-size: 30px;
+  padding-right: 25px;
+  padding-top: 10px;
+  max-width: 435px;
+}
+
+@media screen and (max-width:992px) {
+  .banner-two-wrapper-container-how-it-works-nametask {
+    font-size: 38px;
+  }
+
+  .banner-two-wrapper {
+    margin: 15px;
+  }
+
+  .bannerThree-containerWrapper-row-entry {
+    padding-top: 40px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bannerSeven-cta-containerWrapper {
+    width: 100%;
+  }
+
+  .banner-two-wrapper:before {
+    display: none
+  }
+
+  .banner-two-wrapper-container-tasks {
+    display: none;
+  }
+
+  .banner-two-wrapper:after {
+    display: none;
+  }
+
+  .banner-two-wrapper-container-how-it-works {
+    display: block;
+  }
+
+  .banner-two-wrapper-container-how-it-works a {
+    text-decoration: none;
+  }
+
+  .banner-one-bottom {
+    width: 90%;
+  }
 }

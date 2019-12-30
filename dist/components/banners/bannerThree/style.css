@@ -1,11 +1,12 @@
 .bannerThree-container {
-    background-color: rgb(255, 255, 255);;
+    background-color: rgb(255, 255, 255);
     padding: 66px 0 110px;
 }
 
 .bannerThree-containerWrapper {
     max-width: 1170px;
-    margin:auto;
+    margin: auto;
+
 }
 
 .bannerThree-containerWrapper-row-title {
@@ -16,7 +17,7 @@
     color: var(--thunder);
 }
 
-.bannerThree-containerWrapper-row-entry{
+.bannerThree-containerWrapper-row-entry {
     display: flex;
     padding-top: 65px;
     justify-content: space-between;
@@ -32,7 +33,7 @@
     border: 1px solid var(--bizarre);
     background-color: var(--white);
     box-shadow: 0 0 22px 0 var(--bizarre);
-    margin:15px;
+    margin: 15px;
 }
 
 .bannerThree-containerWrapper-row-advantageItem-iconWrapper {
@@ -40,10 +41,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .bannerThree-containerWrapper-row-advantageItem-icon {
-    height: 100%;
+    max-height: 234px;
     width: 100%;
     max-width: 100%;
     background-size: contain;
@@ -75,23 +77,41 @@
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
     color: #0a67b3;
-    font-weight:normal;
+    font-weight: normal;
 }
 
 @media screen and (max-width:992px) {
-    .bannerThree-containerWrapper-row-entry{
+    .bannerThree-containerWrapper {
+
+        margin: 15px;
+    }
+
+    .bannerThree-containerWrapper-row-entry {
         padding-top: 40px;
         flex-direction: column;
         justify-content: center;
     }
 
-    .bannerSeven-cta-containerWrapper{
-     width: 100%;
+    .bannerSeven-cta-containerWrapper {
+        width: 100%;
+    }
+
+    .bannerThree-containerWrapper-row-advantageItem-description {
+        font-size: 38px;
+        line-height: 1.2;
+
+    }
+
+    .bannerThree-containerWrapper-row-advantageItem-title {
+
+        font-size: 44px;
+        line-height: 1.5;
+
     }
 }
-@media (min-width: 1200px)
-{
-    .bannerSeven-cta-containerWrapper{
-    max-width: 1170px;
-}
+
+@media (min-width: 1200px) {
+    .bannerSeven-cta-containerWrapper {
+        max-width: 1170px;
+    }
 }

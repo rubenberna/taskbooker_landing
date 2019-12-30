@@ -62,30 +62,7 @@ img.banner-one-img.up {
   align-self: flex-start;
 } */
 
-button.large-btn {
-  font-size: 34px;
-  border-radius: 6px;
-  padding: 13px 20px 8px;
-  background: var(--denim);
-  color: var(--white);
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-  position: relative;
-  margin: 20px 0 0;
-  min-height: 82px;
-  font-weight: 400;
-  font-size: 39px;
-  line-height: 47px;
-  max-width: 570px;
-  align-self: baseline;
-}
 
-button.large-btn:hover {
-  background-color: var(--white);
-  border-color: var(--denim);
-  color: var(--denim);
-}
 
 .banner-one-breadcrumbs {
   display: flex;
@@ -121,8 +98,34 @@ a.banner-one-breadcrumb-dead {
 i.bc {
   margin-right: 15px;
 }
+a.large-btn {
+  text-decoration: none;
+  font-size: 34px !important;
+  border-radius: 6px;
+  padding: 13px 20px 8px;
+  background: var(--denim);
+  color: var(--white);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  position: relative;
+  margin: 20px 0 0;
+  min-height: 82px;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 47px;
+  max-width: 536px;
+  max-height: 124px;
+  align-self: baseline;
+}
 
-button.sticky-btn {
+a.large-btn:hover {
+  background-color: var(--white);
+  border-color: var(--denim);
+  color: var(--denim);
+}
+a.sticky-btn {
+  text-decoration: none;
   position: -webkit-sticky;
   position: sticky;
   top: 90px;
@@ -137,14 +140,16 @@ button.sticky-btn {
   cursor: pointer;
   transition: all .2s ease-in-out;
   min-width: 205px;
+  /* margin: -100px 90px 0 0; */
   font-size: 19px;
 }
 
-button.sticky-btn:hover {
+a.sticky-btn:hover {
   background-color: var(--white);
   border-color: var(--denim);
   color: var(--denim);
 }
+
 @media (min-width: 1200px) {
   .banner-one-bottom,
   .banner-one-container {
@@ -179,4 +184,23 @@ button.sticky-btn:hover {
   button.large-btn{
     margin: auto;
   }
+  a.bannerseven-download-containerwrapper-button{
+    max-width: 100% !important;
+    margin: 20px !important;
+  }
+  a.large-btn{
+    max-width: 100% !important;
+
+  }
+  .nav-mobile-containerWrapper-rowNav-menuListItem{
+    font-size: 38px;
+  }
+  .seo-pages-cities-select .select-title {
+    font-size: 38px;
+    width: 126px;
+  }
+  select{
+    font-size: 10px;
+  }
+
 }

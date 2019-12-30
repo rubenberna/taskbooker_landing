@@ -56,7 +56,8 @@ img.banner-one-img.up {
   align-self: flex-start;
 }
 
-button.large-btn {
+a.large-btn {
+  text-decoration: none;
   font-size: 34px;
   border-radius: 6px;
   padding: 13px 20px 8px;
@@ -76,7 +77,7 @@ button.large-btn {
   align-self: baseline;
 }
 
-button.large-btn:hover {
+a.large-btn:hover {
   background-color: var(--white);
   border-color: var(--denim);
   color: var(--denim);
@@ -113,7 +114,8 @@ i.bc {
   margin-right: 15px;
 }
 
-button.sticky-btn {
+a.sticky-btn {
+  text-decoration: none;
   position: -webkit-sticky;
   position: sticky;
   top: 90px;
@@ -132,7 +134,7 @@ button.sticky-btn {
   font-size: 19px;
 }
 
-button.sticky-btn:hover {
+a.sticky-btn:hover {
   background-color: var(--white);
   border-color: var(--denim);
   color: var(--denim);

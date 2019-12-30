@@ -21,17 +21,32 @@ a.banner-seven-btn-hier {
     justify-content: space-between;
 }
 
-.bannerseven-download-containerwrapper-button{
-    margin: 0;
-    max-width: 480px;
-    width: 100%;
-    border-radius: 6px;
-    font-size: 32px;
-    line-height: 40px;
-    font-weight: 400;
-    color: #fff;
-    background-color: #0a67b3;
-    border: 2px solid transparent;
+a.bannerseven-download-containerwrapper-button {
+  text-decoration: none;
+  font-size: 34px;
+  border-radius: 6px;
+  padding: 13px 20px 8px;
+  background: var(--denim);
+  color: var(--white);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  position: relative;
+  margin: 20px 0 0;
+  min-height: 82px;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 47px;
+  max-width: 476px;
+  max-height: 170px;
+  align-self: baseline;
+  text-align: center;
+}
+
+a.bannerseven-download-containerwrapper-button:hover {
+  background-color: var(--white);
+  border-color: var(--denim);
+  color: var(--denim);
 }
 
 .bannerseven-download-containerWrapper-description{

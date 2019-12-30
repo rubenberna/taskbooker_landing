@@ -1,9 +1,11 @@
 var path = require('path');
 var webpack = require('webpack');
 var dotenv = require('dotenv').config({path: __dirname + '/.env'});
+var modeEnv = process.env.NODE_ENV ? process.env.NODE_ENV : 'production'
 
 module.exports = {
  entry: './client/src/main.jsx',
+ mode: modeEnv,
  module: {
    rules: [
      {

@@ -1,17 +1,22 @@
 #banner-one {
   background: var(--bannerOne);
-  height: 800px;
-  padding: 90px 150px;
   position: relative;
+  padding: 66px 0 200px;
 }
-
+.banner-one-bottom,
 .banner-one-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.banner-one-container-info {
   display: flex;
   justify-content: space-evenly;
 }
 
 .banner-one-container-text {
-  width: 70%;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,25 +41,26 @@ li.bullet {
 }
 
 i.fa-check-circle {
-  color: var(--downy)
+  color: var(--downy);
 }
 
 .banner-one-container-img {
   display: flex;
   height: 500px;
+  max-width: 30%;
 }
-
-img.banner-one-img {
-  width: 300px;
-}
-
 img.banner-one-img.down {
-  align-self: flex-end;
+  width: 100%;
 }
+/* img.banner-one-img {
+  width: 300px;
+} */
+
+/* 
 
 img.banner-one-img.up {
   align-self: flex-start;
-}
+} */
 
 button.large-btn {
   font-size: 34px;
@@ -83,14 +89,18 @@ button.large-btn:hover {
 
 .banner-one-breadcrumbs {
   display: flex;
-  position: absolute;
-  bottom: 10px;
 }
-
+.banner-one-bottom {
+  display: flex;
+  position: absolute;
+  bottom: 100px;
+  justify-content: space-between;
+  width: 100%;
+}
 a.banner-one-breadcrumb-live {
   margin-right: 15px;
   font-size: 18px;
-  color: #03A9F4;
+  color: #03a9f4;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
@@ -127,7 +137,6 @@ button.sticky-btn {
   cursor: pointer;
   transition: all .2s ease-in-out;
   min-width: 205px;
-  margin: -100px 90px 0 0;
   font-size: 19px;
 }
 
@@ -135,4 +144,39 @@ button.sticky-btn:hover {
   background-color: var(--white);
   border-color: var(--denim);
   color: var(--denim);
+}
+@media (min-width: 1200px) {
+  .banner-one-bottom,
+  .banner-one-container {
+    max-width: 1170px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .banner-one-bottom,
+  .banner-one-container {
+    width: 100%;
+  }
+  .banner-one-container-info {
+    flex-direction: column-reverse;
+  }
+  .banner-one-container-text {
+    max-width: 100%;
+  }
+  .banner-one-container-img {
+    max-width: 100%;
+  }
+ 
+  .banner-one-button {
+    display: none;
+  }
+  li.bullet {
+    font-size: 38px;
+  }
+  a.banner-one-breadcrumb-dead {
+    font-size: 38px;
+  }
+  button.large-btn{
+    margin: auto;
+  }
 }

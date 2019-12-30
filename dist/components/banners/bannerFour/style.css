@@ -9,8 +9,8 @@
 }
 
 .banner-four-wrapper-container {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .banner-four-wrapper-container-title{
@@ -21,10 +21,9 @@
   color:var(--thunder);
   background: var(--vista-white);
   margin: 0;
-  padding-top: 32px;
 }
 
-@media (min-width:var(--large-and-down)) {
+@media (min-width: 1200px) {
   .banner-four-wrapper-container {
     max-width: 1170px;
 }
@@ -61,6 +60,9 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  box-shadow: 0 0 22px 0 var(--fantasy);
+  margin: 15px;
+
 }
 
 .banner-four-wrapper-container-rating-card-cardcontainer {
@@ -199,4 +201,26 @@ margin-right: 10px;
   padding-top: 1px;
   margin: 0 3px 0 5px;
   line-height: 17px;
+}
+@media screen and (max-width:992px) {
+
+  .banner-four-wrapper-container-rating-tasker-taskerwrapper{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    line-height: 26px;
+    width: 100%;
+  }
+  .banner-four-wrapper-container-rating-tasker-columnlast{
+    width: 100%;
+  }
+  .banner-four-wrapper-container-rating-ratinginforow_ratingvaluedescription,
+ .banner-four-wrapper-container-rating-ratinginforow_ratingvalue {
+  font-size: 38px;
+  line-height: 1.2;
+}
+.banner-four-wrapper-container-rating-card-headertext{
+  font-size: 44px;
+    line-height: 1.5;
+}
 }

@@ -17,6 +17,7 @@ select{
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  width: 330px;
 
 }
 select:focus{
@@ -42,6 +43,7 @@ select:focus{
 
 .select-title {
   font-size: 21px;
+  width: 100px;
 }
 
 .container-select{
@@ -80,7 +82,7 @@ select:focus{
   padding: 2.5%;
   display: flex;
   justify-content: space-around;
-  margin-top: 30px;
+  padding: 95px 0;
 }
 
 .seo-pages-cities-select span{
@@ -90,3 +92,23 @@ select:focus{
 option {
   text-transform: capitalize;
 }
+
+
+@media screen and (max-width:992px){
+  .seo-pages-cities-select{
+    flex-direction: column;
+    align-items: center;      }
+    .seo-pages-cities-list{
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      columns: 2;
+  height: 888px;
+    
+    }
+    .container {
+      max-width: 100%;
+    }
+    .seo-pages-cities-item{
+      font-size: 38px;
+    }
+  }

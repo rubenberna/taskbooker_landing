@@ -1,39 +1,41 @@
 div#banner-one
   div.banner-one-container
-    div.banner-one-container-text
-      div.banner-one-container-text-info
-        h1.banner-one-container-text-header #{HeadlineDynamicContent}
-        div
-          ul.banner-one-container-text-bullets
-            li.bullet
-              i(class="fas fa-check-circle") 
-              | 
-              = Bullet1
-            li.bullet
-              i(class="fas fa-check-circle") 
-              | 
-              = Bullet2
-            li.bullet
-              i(class="fas fa-check-circle") 
-              | 
-              = Bullet3
-            li.bullet
-              i(class="fas fa-check-circle") 
-              | 
-              = Bullet4
-      button(class='large-btn')= CTAtext
-    div.banner-one-container-img
-      img(src='../../../assets/images/vrow_phone.svg' class='banner-one-img down')
-      img(src='../../../assets/images/man_tablet.svg' class='banner-one-img up')
-  div.banner-one-breadcrumbs
-    if Breadcrumb1category
-      a(class=(!Breadcrumb2category ? 'banner-one-breadcrumb-dead' : 'banner-one-breadcrumb-live') href='/' + Breadcrumb1) #{Breadcrumb1category} 
-    if Breadcrumb2category
-      div.inner-breadcrumb
-        <i class="material-icons bc">chevron_right</i>
-        a(class=(!Breadcrumb3category ? 'banner-one-breadcrumb-dead' : 'banner-one-breadcrumb-live') href='/' + Breadcrumb1 + '/' + Breadcrumb2) #{Breadcrumb2category}
-    if Breadcrumb3category
-      div.inner-breadcrumb
-        <i class="material-icons bc">chevron_right</i>
-        a(class='banner-one-breadcrumb-dead' href='/' + Breadcrumb1 + '/' + Breadcrumb2 + '/' + Breadcrumb3) #{Breadcrumb3category}
-button(class='sticky-btn')= CTAtext  
+    div.banner-one-container-info
+      div.banner-one-container-text
+        div.banner-one-container-text-info
+          h1.banner-one-container-text-header #{HeadlineDynamicContent}
+          div
+            ul.banner-one-container-text-bullets
+              li.bullet
+                i(class="fas fa-check-circle") 
+                | 
+                = Bullet1
+              li.bullet
+                i(class="fas fa-check-circle") 
+                | 
+                = Bullet2
+              li.bullet
+                i(class="fas fa-check-circle") 
+                | 
+                = Bullet3
+              li.bullet
+                i(class="fas fa-check-circle") 
+                | 
+                = Bullet4
+        button(class='large-btn')= CTAtext
+      div.banner-one-container-img
+        img(src='../../../assets/images/discussion.svg' class='banner-one-img down')
+    div.banner-one-bottom
+        div.banner-one-breadcrumbs
+          if Breadcrumb1category
+            a(class=(!Breadcrumb2category ? 'banner-one-breadcrumb-dead' : 'banner-one-breadcrumb-live') href='/' + Breadcrumb1) #{Breadcrumb1category} 
+          if Breadcrumb2category
+            div.inner-breadcrumb
+              <i class="material-icons bc">chevron_right</i>
+              a(class=(!Breadcrumb3category ? 'banner-one-breadcrumb-dead' : 'banner-one-breadcrumb-live') href='/' + Breadcrumb1 + '/' + Breadcrumb2) #{Breadcrumb2category}
+          if Breadcrumb3category
+            div.inner-breadcrumb
+              <i class="material-icons bc">chevron_right</i>
+              a(class='banner-one-breadcrumb-dead' href='/' + Breadcrumb1 + '/' + Breadcrumb2 + '/' + Breadcrumb3) #{Breadcrumb3category}
+        div.banner-one-button
+          button(class='sticky-btn')= CTAtext  

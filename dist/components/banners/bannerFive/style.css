@@ -24,6 +24,7 @@
 
 .paragraph {
   margin: 28px 20px;
+  font-size: 20px;
 }
 .banner-five-wrapper-container{
 padding-right: 15px;
@@ -36,4 +37,9 @@ margin-left: auto;
       max-width: 1170px;
   }
 
+}
+@media screen and (max-width: 992px) {
+  .paragraph {    font-size: 38px;
+    line-height: 1.2;
+  }
 }

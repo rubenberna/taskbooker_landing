@@ -23,7 +23,7 @@
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
     "mongodb": "^3.4.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "pug": "^2.0.4",
     "redis": "^2.8.0"
   },

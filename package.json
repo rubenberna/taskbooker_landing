@@ -15,7 +15,7 @@
   "dependencies": {
     "apollo-boost": "^0.4.4",
     "async-redis": "^1.1.7",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bson": "^4.0.2",
     "cross-fetch": "^3.0.4",
     "dotenv": "^8.2.0",
